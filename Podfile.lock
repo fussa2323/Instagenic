@@ -1,0 +1,27 @@
+PODS:
+  - Alamofire (3.0.0)
+  - AlamofireObjectMapper (1.1.0):
+    - Alamofire (~> 3.0.0)
+    - ObjectMapper (~> 0.19)
+  - MotionBlur (0.2.0)
+  - ObjectMapper (0.19)
+  - SwiftTask (4.0.0)
+  - SwiftyJSON (2.3.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - AlamofireObjectMapper (~> 1.0)
+  - MotionBlur
+  - ObjectMapper (~> 0.19)
+  - SwiftTask
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: b61782387f81bcc538a0284cf2bb5d7995cd0a80
+  AlamofireObjectMapper: e31eb96b6adf855bb1b7737ff47598c5f42eb61e
+  MotionBlur: 5dc5583a725f087bdf952278b1c41b7bb7ba5f79
+  ObjectMapper: a88114e5df20f055da63029f25cbc01014847c91
+  SwiftTask: 724ff63fc8bd9b366d242696d4aff098f6de3c3a
+  SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
+
+COCOAPODS: 0.38.2
