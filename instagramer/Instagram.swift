@@ -50,5 +50,29 @@ struct Instagram {
 }
 
 extension Alamofire.Request {
+    class func imageResponseSerializer() -> GenericResponseSerializer<UIImage> {
+        return GenericResponseSerializer { request, response, data in
+            guard let validData = data where validData.length > 0 else {
+                return .Failure(data, Request.imageDataError())
+            }
+            
+            if let image = UIImage(data: validData, scale: UIScreen.mainScreen().scale) {
+                return Result<UIImage>.Success(image)
+            }
+            else {
+                return .Failure(data, Request.imageDataError())
+            }
+            
+        }
+    }
     
+    func responseImage(completionHandler: (NSURLRequest?, NSHTTPURLResponse?, Result<UIImage>) -> Void) -> Self {
+        return response(responseSerializer: Request.imageResponseSerializer(), completionHandler: completionHandler)
+    }
+    
+    private class func imageDataError() -> NSError {
+        let failureReason = "Failed to create a valid Image from the response data"
+        return Error.errorWithCode(NSURLErrorCannotDecodeContentData, failureReason: failureReason)
+    }
+
 }

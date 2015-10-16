@@ -3,11 +3,11 @@
 use_frameworks!
 
 target 'instagramer' do
-  pod 'Alamofire', '~> 3.0'
+  pod 'Alamofire', '~> 2.0'
   pod 'SwiftyJSON'
   pod 'SwiftTask'
   pod 'ObjectMapper', '~> 0.19'
-  pod 'AlamofireObjectMapper', '~> 1.0'
+#  pod 'AlamofireObjectMapper', '~> 1.0'
   # pod 'SCLAlertView'
   # pod 'LTMorphingLabel'
   # pod 'MMPopLabel'
