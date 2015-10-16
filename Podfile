@@ -14,6 +14,7 @@ target 'instagramer' do
   # pod 'FXForms'
   # pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
   pod 'MotionBlur'
+  pod 'RealmSwift'
 end
 
 target 'instagramerTests' do

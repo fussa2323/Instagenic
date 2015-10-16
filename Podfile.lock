@@ -2,6 +2,11 @@ PODS:
   - Alamofire (2.0.2)
   - MotionBlur (0.2.0)
   - ObjectMapper (0.19)
+  - Realm (0.96.0):
+    - Realm/Headers (= 0.96.0)
+  - Realm/Headers (0.96.0)
+  - RealmSwift (0.96.0):
+    - Realm (= 0.96.0)
   - SwiftTask (4.0.0)
   - SwiftyJSON (2.3.0)
 
@@ -9,6 +14,7 @@ DEPENDENCIES:
   - Alamofire (~> 2.0)
   - MotionBlur
   - ObjectMapper (~> 0.19)
+  - RealmSwift
   - SwiftTask
   - SwiftyJSON
 
@@ -16,6 +22,8 @@ SPEC CHECKSUMS:
   Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
   MotionBlur: 5dc5583a725f087bdf952278b1c41b7bb7ba5f79
   ObjectMapper: a88114e5df20f055da63029f25cbc01014847c91
+  Realm: d1b1eff5264cd6a3158b7a9b6c499d7f6ad3a860
+  RealmSwift: 40246e6f57a4e863bfdfc1ca1d7b967f0df607e2
   SwiftTask: 724ff63fc8bd9b366d242696d4aff098f6de3c3a
   SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
 
