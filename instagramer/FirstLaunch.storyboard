@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="N8q-sf-Lou">
+            <objects>
+                <viewController id="Lda-sQ-h6a" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eLo-fO-tHO"/>
+                        <viewControllerLayoutGuide type="bottom" id="KPd-C9-Fpi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6II-RM-S3e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQJ-ik-o9T">
+                                <rect key="frame" x="226" y="490" width="148" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Instagram でログイン"/>
+                                <connections>
+                                    <segue destination="qt2-Ec-qU8" kind="show" id="Lld-7o-xbK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jQJ-ik-o9T" firstAttribute="centerX" secondItem="6II-RM-S3e" secondAttribute="centerX" id="FhE-NC-eo3"/>
+                            <constraint firstItem="KPd-C9-Fpi" firstAttribute="top" secondItem="jQJ-ik-o9T" secondAttribute="bottom" constant="80" id="wdf-aN-ZEZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LbG-NM-UnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="482"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="MhL-vg-01r">
+            <objects>
+                <viewController id="qt2-Ec-qU8" customClass="LoginViewController" customModule="instagramer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mVX-3c-XwK"/>
+                        <viewControllerLayoutGuide type="bottom" id="vGC-YB-Uzn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vSI-YG-4nZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I65-q1-DgS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="ログイン" id="peo-CM-Uhb"/>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7G-9j-9jQ">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I65-q1-DgS" firstAttribute="top" secondItem="vSI-YG-4nZ" secondAttribute="topMargin" id="2b6-qQ-YZr"/>
+                            <constraint firstItem="Y7G-9j-9jQ" firstAttribute="leading" secondItem="vSI-YG-4nZ" secondAttribute="leadingMargin" constant="-20" id="354-Ca-xvG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I65-q1-DgS" secondAttribute="trailing" constant="-20" id="A7A-KV-LS0"/>
+                            <constraint firstItem="Y7G-9j-9jQ" firstAttribute="top" secondItem="I65-q1-DgS" secondAttribute="bottom" id="L53-8J-Skp"/>
+                            <constraint firstItem="I65-q1-DgS" firstAttribute="leading" secondItem="vSI-YG-4nZ" secondAttribute="leadingMargin" constant="-20" id="Tsm-0j-mi1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y7G-9j-9jQ" secondAttribute="trailing" constant="-20" id="rDo-XD-22g"/>
+                            <constraint firstItem="vGC-YB-Uzn" firstAttribute="top" secondItem="Y7G-9j-9jQ" secondAttribute="bottom" id="yfB-xw-wYe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="G7A-GY-if3"/>
+                    <connections>
+                        <outlet property="navBar" destination="I65-q1-DgS" id="GUj-tj-LJd"/>
+                        <outlet property="webView" destination="Y7G-9j-9jQ" id="fYK-rN-JFk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXC-i5-aoW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1195" y="482"/>
+        </scene>
+    </scenes>
+</document>
