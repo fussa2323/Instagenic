@@ -75,7 +75,6 @@ extension LoginViewController: UIWebViewDelegate {
                         
                         do {
                             let realm = try Realm()
-                            print(realm.path)
                             try realm.write({ () -> Void in
                                 realm.add(user!)
                             })
