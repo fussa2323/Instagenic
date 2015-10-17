@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		47AC50811BD0C1BE00A6C707 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC50801BD0C1BE00A6C707 /* AppDelegate.swift */; };
-		47AC50831BD0C1BE00A6C707 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC50821BD0C1BE00A6C707 /* FirstViewController.swift */; };
-		47AC50851BD0C1BE00A6C707 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC50841BD0C1BE00A6C707 /* SecondViewController.swift */; };
 		47AC50881BD0C1BE00A6C707 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AC50861BD0C1BE00A6C707 /* Main.storyboard */; };
 		47AC508A1BD0C1BE00A6C707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47AC50891BD0C1BE00A6C707 /* Assets.xcassets */; };
 		47AC508D1BD0C1BE00A6C707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AC508B1BD0C1BE00A6C707 /* LaunchScreen.storyboard */; };
@@ -20,6 +18,8 @@
 		47AC50BD1BD0E72A00A6C707 /* FirstLaunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AC50BC1BD0E72A00A6C707 /* FirstLaunch.storyboard */; settings = {ASSET_TAGS = (); }; };
 		47AC50BF1BD0E96000A6C707 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC50BE1BD0E96000A6C707 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		47AC50C11BD0EF2300A6C707 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC50C01BD0EF2300A6C707 /* User.swift */; settings = {ASSET_TAGS = (); }; };
+		47AC50C51BD22F3D00A6C707 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC50C41BD22F3D00A6C707 /* FirstLaunchViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		47AC50C71BD22F9E00A6C707 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC50C61BD22F9E00A6C707 /* TabBarController.swift */; settings = {ASSET_TAGS = (); }; };
 		63C9B135FE263B973831163D /* Pods_instagramer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159401587A139F7F8EAEED50 /* Pods_instagramer.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -44,8 +44,6 @@
 		159401587A139F7F8EAEED50 /* Pods_instagramer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagramer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47AC507D1BD0C1BE00A6C707 /* instagramer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagramer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47AC50801BD0C1BE00A6C707 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		47AC50821BD0C1BE00A6C707 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		47AC50841BD0C1BE00A6C707 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		47AC50871BD0C1BE00A6C707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47AC50891BD0C1BE00A6C707 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47AC508C1BD0C1BE00A6C707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +59,8 @@
 		47AC50BC1BD0E72A00A6C707 /* FirstLaunch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstLaunch.storyboard; sourceTree = "<group>"; };
 		47AC50BE1BD0E96000A6C707 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		47AC50C01BD0EF2300A6C707 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		47AC50C41BD22F3D00A6C707 /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = "<group>"; };
+		47AC50C61BD22F9E00A6C707 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		72979A6E99C4D4E6CC2A68EF /* Pods-instagramer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagramer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instagramer/Pods-instagramer.debug.xcconfig"; sourceTree = "<group>"; };
 		F73A9B59620E7252345452D2 /* Pods-instagramer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagramer.release.xcconfig"; path = "Pods/Target Support Files/Pods-instagramer/Pods-instagramer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,9 +149,9 @@
 		47AC50B01BD0D16600A6C707 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				47AC50821BD0C1BE00A6C707 /* FirstViewController.swift */,
-				47AC50841BD0C1BE00A6C707 /* SecondViewController.swift */,
+				47AC50C61BD22F9E00A6C707 /* TabBarController.swift */,
 				47AC50BE1BD0E96000A6C707 /* LoginViewController.swift */,
+				47AC50C41BD22F3D00A6C707 /* FirstLaunchViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -406,12 +406,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47AC50C51BD22F3D00A6C707 /* FirstLaunchViewController.swift in Sources */,
+				47AC50C71BD22F9E00A6C707 /* TabBarController.swift in Sources */,
 				47AC50BB1BD0D5DF00A6C707 /* Instagram.swift in Sources */,
-				47AC50851BD0C1BE00A6C707 /* SecondViewController.swift in Sources */,
 				47AC50C11BD0EF2300A6C707 /* User.swift in Sources */,
 				47AC50811BD0C1BE00A6C707 /* AppDelegate.swift in Sources */,
 				47AC50BF1BD0E96000A6C707 /* LoginViewController.swift in Sources */,
-				47AC50831BD0C1BE00A6C707 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

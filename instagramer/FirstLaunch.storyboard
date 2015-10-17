@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First Launch View Controller-->
         <scene sceneID="N8q-sf-Lou">
             <objects>
-                <viewController id="Lda-sQ-h6a" sceneMemberID="viewController">
+                <viewController id="Lda-sQ-h6a" customClass="FirstLaunchViewController" customModule="instagramer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eLo-fO-tHO"/>
                         <viewControllerLayoutGuide type="bottom" id="KPd-C9-Fpi"/>

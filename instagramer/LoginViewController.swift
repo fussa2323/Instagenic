@@ -8,9 +8,11 @@
 
 import UIKit
 import Foundation
-import CoreData
+import Realm
+import RealmSwift
 import Alamofire
 import SwiftyJSON
+import ObjectMapper
 
 class LoginViewController: UIViewController {
     
@@ -68,11 +70,21 @@ extension LoginViewController: UIWebViewDelegate {
                     let json = JSON(jsonObject)
                     
                     if let accessToken = json["access_token"].string, userID = json["user"]["id"].string {
-                        let user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: self.coreDataStack.context) as! User
-                        user.userID = userID
-                        user.accessToken = accessToken
-                        self.coreDataStack.saveContext()
-                        self.performSegueWithIdentifier("unwindToPhotoBrowser", sender: ["user": user])
+                        let dic = ["access_token": accessToken, "userID": userID]
+                        let user = Mapper<User>().map(dic)
+                        
+                        do {
+                            let realm = try Realm()
+                            print(realm.path)
+                            try realm.write({ () -> Void in
+                                realm.add(user!)
+                            })
+                        }
+                        catch {
+                            print("Realm save error...")
+                        }
+                        
+//                        self.performSegueWithIdentifier("unwindToPhotoBrowser", sender: ["user": user])
                     }
                 case .Failure:
                     break;
