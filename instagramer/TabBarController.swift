@@ -20,8 +20,10 @@ class TabBarController: UITabBarController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.segueToFirstLaunch()
-        
+        if !isLogin {
+//            isLogin = !isLogin
+            self.segueToFirstLaunch()
+        }
     }
 
     override func didReceiveMemoryWarning() {
