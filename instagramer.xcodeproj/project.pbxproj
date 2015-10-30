@@ -28,6 +28,8 @@
 		47DC4D421BE34DDF0043C7F5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4D411BE34DDF0043C7F5 /* SearchViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		47DC4D441BE34E4E0043C7F5 /* AlbumCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4D431BE34E4E0043C7F5 /* AlbumCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		47DC4D461BE34E8A0043C7F5 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4D451BE34E8A0043C7F5 /* MyPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		47DC4D481BE35E000043C7F5 /* HashTag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DC4D471BE35E000043C7F5 /* HashTag.storyboard */; settings = {ASSET_TAGS = (); }; };
+		47DC4D4A1BE35E2C0043C7F5 /* HashTagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4D491BE35E2C0043C7F5 /* HashTagTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		63C9B135FE263B973831163D /* Pods_instagramer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159401587A139F7F8EAEED50 /* Pods_instagramer.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		47DC4D411BE34DDF0043C7F5 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		47DC4D431BE34E4E0043C7F5 /* AlbumCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewController.swift; sourceTree = "<group>"; };
 		47DC4D451BE34E8A0043C7F5 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		47DC4D471BE35E000043C7F5 /* HashTag.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HashTag.storyboard; sourceTree = "<group>"; };
+		47DC4D491BE35E2C0043C7F5 /* HashTagTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashTagTableViewController.swift; sourceTree = "<group>"; };
 		72979A6E99C4D4E6CC2A68EF /* Pods-instagramer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagramer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instagramer/Pods-instagramer.debug.xcconfig"; sourceTree = "<group>"; };
 		F73A9B59620E7252345452D2 /* Pods-instagramer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagramer.release.xcconfig"; path = "Pods/Target Support Files/Pods-instagramer/Pods-instagramer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +175,7 @@
 				47DC4D3D1BE34AB30043C7F5 /* FeedViewController.swift */,
 				47DC4D411BE34DDF0043C7F5 /* SearchViewController.swift */,
 				47DC4D431BE34E4E0043C7F5 /* AlbumCollectionViewController.swift */,
+				47DC4D491BE35E2C0043C7F5 /* HashTagTableViewController.swift */,
 				47DC4D451BE34E8A0043C7F5 /* MyPageViewController.swift */,
 			);
 			name = Controllers;
@@ -201,6 +206,7 @@
 				47DC4D351BE349740043C7F5 /* Search.storyboard */,
 				47DC4D371BE3497E0043C7F5 /* Album.storyboard */,
 				47DC4D391BE349860043C7F5 /* MyPage.storyboard */,
+				47DC4D471BE35E000043C7F5 /* HashTag.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -358,6 +364,7 @@
 				47DC4D381BE3497E0043C7F5 /* Album.storyboard in Resources */,
 				47AC508D1BD0C1BE00A6C707 /* LaunchScreen.storyboard in Resources */,
 				47DC4D401BE34AB30043C7F5 /* FeedViewController.xib in Resources */,
+				47DC4D481BE35E000043C7F5 /* HashTag.storyboard in Resources */,
 				47DC4D3A1BE349860043C7F5 /* MyPage.storyboard in Resources */,
 				47AC50BD1BD0E72A00A6C707 /* FirstLaunch.storyboard in Resources */,
 				47AC508A1BD0C1BE00A6C707 /* Assets.xcassets in Resources */,
@@ -440,6 +447,7 @@
 				47DC4D441BE34E4E0043C7F5 /* AlbumCollectionViewController.swift in Sources */,
 				47AC50BB1BD0D5DF00A6C707 /* Instagram.swift in Sources */,
 				47DC4D461BE34E8A0043C7F5 /* MyPageViewController.swift in Sources */,
+				47DC4D4A1BE35E2C0043C7F5 /* HashTagTableViewController.swift in Sources */,
 				47AC50C11BD0EF2300A6C707 /* User.swift in Sources */,
 				47AC50811BD0C1BE00A6C707 /* AppDelegate.swift in Sources */,
 				47AC50BF1BD0E96000A6C707 /* LoginViewController.swift in Sources */,

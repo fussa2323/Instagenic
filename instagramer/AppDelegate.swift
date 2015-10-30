@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var navigationController2: UINavigationController?
     var navigationController3: UINavigationController?
     var navigationController4: UINavigationController?
+    var navigationController5: UINavigationController?
     var storyboard: UIStoryboard = UIStoryboard()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -50,18 +51,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let albumTabbarItem = UITabBarItem(title: "Album", image: nil, selectedImage: nil)
         self.navigationController3?.tabBarItem = albumTabbarItem
         
-        // set up 4th tab page "MyPage"
+        // set up 4th tab page "HashTag"
+        storyboard = UIStoryboard(name: "HashTag", bundle: NSBundle.mainBundle())
+        let hashTagViewController: UIViewController = storyboard.instantiateInitialViewController()!
+        self.navigationController4 = UINavigationController(rootViewController: hashTagViewController)
+        
+        let hashTagTabbarItem = UITabBarItem(title: "HashTag", image: nil, selectedImage: nil)
+        self.navigationController4?.tabBarItem = hashTagTabbarItem
+        
+        // set up 5th tab page "MyPage"
         storyboard = UIStoryboard(name: "MyPage", bundle: NSBundle.mainBundle())
         let myPageViewController: UIViewController = storyboard.instantiateInitialViewController()!
-        self.navigationController4 = UINavigationController(rootViewController: myPageViewController)
+        self.navigationController5 = UINavigationController(rootViewController: myPageViewController)
         
         let myPageTabbarItem = UITabBarItem(title: "myPage", image: nil, selectedImage: nil)
-        self.navigationController4?.tabBarItem = myPageTabbarItem
+        self.navigationController5?.tabBarItem = myPageTabbarItem
         
         // set up tab bar controller
         storyboard = UIStoryboard(name: "TabBar", bundle: NSBundle.mainBundle())
         tabbarController = storyboard.instantiateInitialViewController() as? UITabBarController
-        tabbarController?.setViewControllers(NSArray(objects: navigationController1!, navigationController2!, navigationController3!, navigationController4!) as? [UIViewController], animated: false)
+        tabbarController?.setViewControllers(NSArray(objects: navigationController1!, navigationController2!, navigationController3!, navigationController4!, navigationController5!) as? [UIViewController], animated: false)
         
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
