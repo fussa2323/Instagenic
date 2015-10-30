@@ -132,12 +132,12 @@
 		47AC507F1BD0C1BE00A6C707 /* instagramer */ = {
 			isa = PBXGroup;
 			children = (
+				47AC50801BD0C1BE00A6C707 /* AppDelegate.swift */,
 				47AC50B51BD0D24500A6C707 /* Request */,
 				47AC50B61BD0D2CB00A6C707 /* Layout */,
 				47AC50B01BD0D16600A6C707 /* Controllers */,
 				47AC50B31BD0D23100A6C707 /* Views */,
 				47AC50B11BD0D17700A6C707 /* Models */,
-				47AC50801BD0C1BE00A6C707 /* AppDelegate.swift */,
 				47AC50891BD0C1BE00A6C707 /* Assets.xcassets */,
 				47AC508E1BD0C1BE00A6C707 /* Info.plist */,
 			);
