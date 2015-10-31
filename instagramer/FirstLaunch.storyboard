@@ -20,14 +20,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQJ-ik-o9T">
                                 <rect key="frame" x="226" y="490" width="148" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Instagram でログイン"/>
+                                <state key="normal" title="Instagram でログイン">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="qt2-Ec-qU8" kind="show" id="Lld-7o-xbK"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.24705882352941178" green="0.44705882352941173" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="jQJ-ik-o9T" firstAttribute="centerX" secondItem="6II-RM-S3e" secondAttribute="centerX" id="FhE-NC-eo3"/>
                             <constraint firstItem="KPd-C9-Fpi" firstAttribute="top" secondItem="jQJ-ik-o9T" secondAttribute="bottom" constant="80" id="wdf-aN-ZEZ"/>

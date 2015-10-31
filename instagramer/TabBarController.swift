@@ -22,7 +22,7 @@ class TabBarController: UITabBarController {
         super.viewDidAppear(animated)
         if !isLogin {
 //            isLogin = !isLogin
-//            self.segueToFirstLaunch()
+            self.segueToFirstLaunch()
         }
     }
 

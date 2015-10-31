@@ -7,7 +7,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="hN5-ow-TaJ">
             <objects>
-                <tabBarController id="a3f-ya-5lA" sceneMemberID="viewController">
+                <tabBarController id="a3f-ya-5lA" customClass="TabBarController" customModule="instagramer" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="uq2-WL-rXv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
