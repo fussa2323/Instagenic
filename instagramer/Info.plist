@@ -46,11 +46,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>App Transport Security Setting</key>
+	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>Allows Arbitrary Loads</key>
-		<false/>
-		<key>Exception Domains</key>
+		<true/>
+		<key>NSExceptionDomains</key>
 		<dict>
 			<key>cdninstagram.com</key>
 			<dict>
@@ -60,6 +60,8 @@
 				<false/>
 				<key>NSThirdPartyExceptionMinimumTLSVersion</key>
 				<string>TLSv1.2</string>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
 			</dict>
 			<key>instagram.com</key>
 			<dict>
@@ -69,6 +71,8 @@
 				<false/>
 				<key>NSThirdPartyExceptionMinimumTLSVersion</key>
 				<string>TLSv1.2</string>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
 			</dict>
 		</dict>
 	</dict>
