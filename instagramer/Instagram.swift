@@ -11,13 +11,13 @@ import UIKit
 
 struct Instagram {
     enum Router: URLRequestConvertible{
-        case PopularPhotos(String, String)
-        case requestOauthCode
-        
         static let baseURLString = "https://api.instagram.com"
         static let clientID = "b4332c7fc1da41ce92d7b60ff668f32a"
         static let redirectURI = "http://www.example.com/"
         static let clientSecret = "e7099308c8fa43c29a2afd66e2266c7a"
+        
+        case PopularPhotos(String, String)
+        case requestOauthCode
         
         var URLRequest: NSMutableURLRequest {
             let result: (path: String, parameters: [String: AnyObject]?) = {
