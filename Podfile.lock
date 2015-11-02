@@ -8,7 +8,6 @@ PODS:
   - Realm/Headers (0.96.0)
   - RealmSwift (0.96.0):
     - Realm (= 0.96.0)
-  - SwiftForms (1.0.2)
   - SwiftTask (4.0.0)
   - SwiftyJSON (2.3.0)
 
@@ -18,7 +17,6 @@ DEPENDENCIES:
   - MotionBlur
   - ObjectMapper (~> 0.19)
   - RealmSwift
-  - SwiftForms
   - SwiftTask
   - SwiftyJSON
 
@@ -29,7 +27,6 @@ SPEC CHECKSUMS:
   ObjectMapper: a88114e5df20f055da63029f25cbc01014847c91
   Realm: d1b1eff5264cd6a3158b7a9b6c499d7f6ad3a860
   RealmSwift: 40246e6f57a4e863bfdfc1ca1d7b967f0df607e2
-  SwiftForms: c439aca9cf462383a1292c028bd14915de42bf6b
   SwiftTask: 724ff63fc8bd9b366d242696d4aff098f6de3c3a
   SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
 

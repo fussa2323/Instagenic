@@ -21,6 +21,9 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Stj-9K-ycL" kind="show" id="ZAD-YO-Vp4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -53,6 +56,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAd-8a-zqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2091" y="366.75"/>
+        </scene>
+        <!--Form Setting View Controller-->
+        <scene sceneID="gKS-LT-Wl8">
+            <objects>
+                <viewController id="Stj-9K-ycL" customClass="FormSettingViewController" customModule="instagramer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rqs-pX-MKw"/>
+                        <viewControllerLayoutGuide type="bottom" id="p23-wN-Nf9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tmk-BC-7iw">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97v-mB-pez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2820" y="366.75"/>
         </scene>
     </scenes>
 </document>
