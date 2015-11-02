@@ -14,14 +14,14 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Feed"
         
-        let leftBarButton = UIBarButtonItem(title: "premium", style: .Plain, target: self, action: "tappedLeftBarButton")
-        let rightBarButton = UIBarButtonItem(title: "Setting", style: .Plain, target: self, action: "tappedRightBarButton")
-        
-        self.navigationItem.leftBarButtonItem = leftBarButton
-        self.navigationItem.rightBarButtonItem = rightBarButton
+//        let leftBarButton = UIBarButtonItem(title: "premium", style: .Plain, target: self, action: "tappedLeftBarButton")
+//        let rightBarButton = UIBarButtonItem(title: "Setting", style: .Plain, target: self, action: "tappedRightBarButton")
+//        
+//        self.navigationItem.leftBarButtonItem = leftBarButton
+//        self.navigationItem.rightBarButtonItem = rightBarButton
         
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.barTintColor = UIColor.mainColor()
+//        self.navigationController?.navigationBar.barTintColor = UIColor.mainColor()
     }
 
     override func didReceiveMemoryWarning() {

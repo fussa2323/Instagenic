@@ -13,6 +13,7 @@ class HashTagTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "HashTag"
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

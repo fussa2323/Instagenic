@@ -18,11 +18,73 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VVb-O7-kMp"/>
+                    <navigationItem key="navigationItem" id="VVb-O7-kMp">
+                        <barButtonItem key="leftBarButtonItem" title="get premium" id="ZQp-GS-VWr">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="YyU-ZB-6dn" kind="showDetail" id="rEP-3G-MuB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Setting" id="eMa-z5-0Cd">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="Stj-9K-ycL" kind="show" id="5e0-8n-1rB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odA-WT-9BD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3936" y="366.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0KS-gk-KIn">
+            <objects>
+                <viewController id="YyU-ZB-6dn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bO0-sa-HIk"/>
+                        <viewControllerLayoutGuide type="bottom" id="EYp-Dc-O3w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ahI-lU-rHD">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2M0-fH-Cfh">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2M0-fH-Cfh" firstAttribute="centerY" secondItem="ahI-lU-rHD" secondAttribute="centerY" id="V9k-a8-U7M"/>
+                            <constraint firstItem="2M0-fH-Cfh" firstAttribute="centerX" secondItem="ahI-lU-rHD" secondAttribute="centerX" id="qJa-jo-Xcf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="2M0-fH-Cfh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="V9k-a8-U7M"/>
+                                <exclude reference="qJa-jo-Xcf"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="2M0-fH-Cfh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="V9k-a8-U7M"/>
+                                <include reference="qJa-jo-Xcf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RZR-cN-gVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4714.5" y="826.5"/>
         </scene>
         <!--Form Setting View Controller-->
         <scene sceneID="gKS-LT-Wl8">
@@ -40,7 +102,7 @@
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="4656" y="366.75"/>
+            <point key="canvasLocation" x="4722" y="-123.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iDI-oj-VE6">
@@ -51,6 +113,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="barTintColor" red="0.2470588235" green="0.44705882349999998" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

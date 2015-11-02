@@ -202,8 +202,8 @@
 				47DC4D331BE3496C0043C7F5 /* Feed.storyboard */,
 				47DC4D351BE349740043C7F5 /* Search.storyboard */,
 				47DC4D371BE3497E0043C7F5 /* Album.storyboard */,
-				47DC4D391BE349860043C7F5 /* MyPage.storyboard */,
 				47DC4D471BE35E000043C7F5 /* HashTag.storyboard */,
+				47DC4D391BE349860043C7F5 /* MyPage.storyboard */,
 				47AC508B1BD0C1BE00A6C707 /* LaunchScreen.storyboard */,
 				47AC50BC1BD0E72A00A6C707 /* FirstLaunch.storyboard */,
 			);
@@ -255,13 +255,13 @@
 			isa = PBXGroup;
 			children = (
 				47AC50C61BD22F9E00A6C707 /* TabBarController.swift */,
-				47AC50BE1BD0E96000A6C707 /* LoginViewController.swift */,
-				47AC50C41BD22F3D00A6C707 /* FirstLaunchViewController.swift */,
 				47DC4D3D1BE34AB30043C7F5 /* FeedViewController.swift */,
 				47DC4D411BE34DDF0043C7F5 /* SearchViewController.swift */,
 				47DC4D431BE34E4E0043C7F5 /* AlbumCollectionViewController.swift */,
 				47DC4D491BE35E2C0043C7F5 /* HashTagTableViewController.swift */,
 				47DC4D451BE34E8A0043C7F5 /* MyPageViewController.swift */,
+				47AC50C41BD22F3D00A6C707 /* FirstLaunchViewController.swift */,
+				47AC50BE1BD0E96000A6C707 /* LoginViewController.swift */,
 			);
 			name = main;
 			sourceTree = "<group>";
