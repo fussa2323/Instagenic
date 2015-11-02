@@ -175,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				47DC4D4F1BE4ABD90043C7F5 /* main */,
-				47DC4D501BE4ABE60043C7F5 /* sub */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -256,6 +255,7 @@
 			children = (
 				47AC50C61BD22F9E00A6C707 /* TabBarController.swift */,
 				47DC4D3D1BE34AB30043C7F5 /* FeedViewController.swift */,
+				47DC4D501BE4ABE60043C7F5 /* sub */,
 				47DC4D411BE34DDF0043C7F5 /* SearchViewController.swift */,
 				47DC4D431BE34E4E0043C7F5 /* AlbumCollectionViewController.swift */,
 				47DC4D491BE35E2C0043C7F5 /* HashTagTableViewController.swift */,

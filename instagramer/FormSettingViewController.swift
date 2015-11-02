@@ -26,6 +26,9 @@ class FormSettingViewController: FormViewController {
         form =
             
             Section()
+            +++ Section("")
+            +++ Section("Feed Setting")
+            
             
             <<< LabelRow () {
                 $0.title = "LabelRow"
