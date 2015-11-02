@@ -27,5 +27,10 @@ class FeedViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func tappedRightBarButton() {
+//        let nextPage = FormSettingViewController(coder: NSCoder())
+//        self.navigationController?.pushViewController(nextPage!, animated: true)
+    }
 
 }

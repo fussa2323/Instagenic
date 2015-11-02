@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="e5b-2h-JFP">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Feed View Controller-->
         <scene sceneID="vdx-7z-Cie">
             <objects>
-                <viewController id="e5b-2h-JFP" customClass="FeedViewController" customModule="instagramer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="e5b-2h-JFP" customClass="FeedViewController" customModule="SwiftForms" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gpf-cS-Vpv"/>
                         <viewControllerLayoutGuide type="bottom" id="ujp-Dh-Yi8"/>
@@ -15,14 +16,43 @@
                     <view key="view" contentMode="scaleToFill" id="Pv0-wz-WAx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGo-dZ-nRI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LGo-dZ-nRI" firstAttribute="centerY" secondItem="Pv0-wz-WAx" secondAttribute="centerY" id="QsW-ey-9rF"/>
+                            <constraint firstItem="LGo-dZ-nRI" firstAttribute="centerX" secondItem="Pv0-wz-WAx" secondAttribute="centerX" id="hra-oz-ieL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="LGo-dZ-nRI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="QsW-ey-9rF"/>
+                                <exclude reference="hra-oz-ieL"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="LGo-dZ-nRI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="QsW-ey-9rF"/>
+                                <include reference="hra-oz-ieL"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="thE-iy-4ZU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAd-8a-zqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1173" y="367"/>
+            <point key="canvasLocation" x="2091" y="366.75"/>
         </scene>
     </scenes>
 </document>

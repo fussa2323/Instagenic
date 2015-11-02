@@ -31,6 +31,7 @@
 		47DC4D481BE35E000043C7F5 /* HashTag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DC4D471BE35E000043C7F5 /* HashTag.storyboard */; settings = {ASSET_TAGS = (); }; };
 		47DC4D4A1BE35E2C0043C7F5 /* HashTagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4D491BE35E2C0043C7F5 /* HashTagTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		47DC4D4D1BE362E60043C7F5 /* UIColoer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4D4C1BE362E60043C7F5 /* UIColoer+.swift */; settings = {ASSET_TAGS = (); }; };
+		47DC4D521BE4B1BC0043C7F5 /* FormSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4D511BE4B1BC0043C7F5 /* FormSettingViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		63C9B135FE263B973831163D /* Pods_instagramer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159401587A139F7F8EAEED50 /* Pods_instagramer.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		47DC4D471BE35E000043C7F5 /* HashTag.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HashTag.storyboard; sourceTree = "<group>"; };
 		47DC4D491BE35E2C0043C7F5 /* HashTagTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashTagTableViewController.swift; sourceTree = "<group>"; };
 		47DC4D4C1BE362E60043C7F5 /* UIColoer+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColoer\U0010+.swift"; sourceTree = "<group>"; };
+		47DC4D511BE4B1BC0043C7F5 /* FormSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSettingViewController.swift; sourceTree = "<group>"; };
 		72979A6E99C4D4E6CC2A68EF /* Pods-instagramer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagramer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instagramer/Pods-instagramer.debug.xcconfig"; sourceTree = "<group>"; };
 		F73A9B59620E7252345452D2 /* Pods-instagramer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagramer.release.xcconfig"; path = "Pods/Target Support Files/Pods-instagramer/Pods-instagramer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,14 +174,8 @@
 		47AC50B01BD0D16600A6C707 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				47AC50C61BD22F9E00A6C707 /* TabBarController.swift */,
-				47AC50BE1BD0E96000A6C707 /* LoginViewController.swift */,
-				47AC50C41BD22F3D00A6C707 /* FirstLaunchViewController.swift */,
-				47DC4D3D1BE34AB30043C7F5 /* FeedViewController.swift */,
-				47DC4D411BE34DDF0043C7F5 /* SearchViewController.swift */,
-				47DC4D431BE34E4E0043C7F5 /* AlbumCollectionViewController.swift */,
-				47DC4D491BE35E2C0043C7F5 /* HashTagTableViewController.swift */,
-				47DC4D451BE34E8A0043C7F5 /* MyPageViewController.swift */,
+				47DC4D4F1BE4ABD90043C7F5 /* main */,
+				47DC4D501BE4ABE60043C7F5 /* sub */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -225,6 +221,7 @@
 		47AC50B61BD0D2CB00A6C707 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				47DC4D4E1BE4ABC50043C7F5 /* PageMenu */,
 				47AC50B71BD0D2DF00A6C707 /* XIB */,
 				47AC50B41BD0D23B00A6C707 /* Storyboards */,
 			);
@@ -245,6 +242,36 @@
 				47DC4D4C1BE362E60043C7F5 /* UIColoer+.swift */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		47DC4D4E1BE4ABC50043C7F5 /* PageMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PageMenu;
+			sourceTree = "<group>";
+		};
+		47DC4D4F1BE4ABD90043C7F5 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				47AC50C61BD22F9E00A6C707 /* TabBarController.swift */,
+				47AC50BE1BD0E96000A6C707 /* LoginViewController.swift */,
+				47AC50C41BD22F3D00A6C707 /* FirstLaunchViewController.swift */,
+				47DC4D3D1BE34AB30043C7F5 /* FeedViewController.swift */,
+				47DC4D411BE34DDF0043C7F5 /* SearchViewController.swift */,
+				47DC4D431BE34E4E0043C7F5 /* AlbumCollectionViewController.swift */,
+				47DC4D491BE35E2C0043C7F5 /* HashTagTableViewController.swift */,
+				47DC4D451BE34E8A0043C7F5 /* MyPageViewController.swift */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		47DC4D501BE4ABE60043C7F5 /* sub */ = {
+			isa = PBXGroup;
+			children = (
+				47DC4D511BE4B1BC0043C7F5 /* FormSettingViewController.swift */,
+			);
+			name = sub;
 			sourceTree = "<group>";
 		};
 		5B362468E9941ACA35C2EA78 /* Pods */ = {
@@ -452,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47DC4D521BE4B1BC0043C7F5 /* FormSettingViewController.swift in Sources */,
 				47DC4D4D1BE362E60043C7F5 /* UIColoer+.swift in Sources */,
 				47AC50C51BD22F3D00A6C707 /* FirstLaunchViewController.swift in Sources */,
 				47AC50C71BD22F9E00A6C707 /* TabBarController.swift in Sources */,
@@ -597,6 +625,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = instagramer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.instagramer.instagramer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -609,6 +638,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = instagramer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.instagramer.instagramer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
