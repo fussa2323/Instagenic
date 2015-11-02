@@ -198,14 +198,14 @@
 		47AC50B41BD0D23B00A6C707 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				47AC508B1BD0C1BE00A6C707 /* LaunchScreen.storyboard */,
-				47AC50BC1BD0E72A00A6C707 /* FirstLaunch.storyboard */,
 				47DC4D3B1BE349B00043C7F5 /* TabBar.storyboard */,
 				47DC4D331BE3496C0043C7F5 /* Feed.storyboard */,
 				47DC4D351BE349740043C7F5 /* Search.storyboard */,
 				47DC4D371BE3497E0043C7F5 /* Album.storyboard */,
 				47DC4D391BE349860043C7F5 /* MyPage.storyboard */,
 				47DC4D471BE35E000043C7F5 /* HashTag.storyboard */,
+				47AC508B1BD0C1BE00A6C707 /* LaunchScreen.storyboard */,
+				47AC50BC1BD0E72A00A6C707 /* FirstLaunch.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
