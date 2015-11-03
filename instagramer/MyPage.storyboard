@@ -229,10 +229,10 @@
             </objects>
             <point key="canvasLocation" x="1219.5" y="76.5"/>
         </scene>
-        <!--View Controller-->
+        <!--My Page Grid View Controller-->
         <scene sceneID="MvU-qM-KoH">
             <objects>
-                <viewController id="N91-2i-D2Q" sceneMemberID="viewController">
+                <viewController id="N91-2i-D2Q" customClass="MyPageGridViewController" customModule="instagramer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RsR-Na-EIW"/>
                         <viewControllerLayoutGuide type="bottom" id="F9o-na-3o2"/>
@@ -241,48 +241,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpm-Br-cb7">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l5h-eI-1Ng">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h6H-jJ-S5m">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yd3-ms-HDx">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gpm-Br-cb7" firstAttribute="centerX" secondItem="tO3-Ou-6tm" secondAttribute="centerX" id="KIu-Uv-eY1"/>
-                            <constraint firstItem="gpm-Br-cb7" firstAttribute="centerY" secondItem="tO3-Ou-6tm" secondAttribute="centerY" id="Tqf-IF-2hW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l5h-eI-1Ng" secondAttribute="trailing" id="WuM-Vk-Gq1"/>
+                            <constraint firstItem="F9o-na-3o2" firstAttribute="top" secondItem="l5h-eI-1Ng" secondAttribute="bottom" id="cqV-9e-MhL"/>
+                            <constraint firstItem="l5h-eI-1Ng" firstAttribute="top" secondItem="RsR-Na-EIW" secondAttribute="bottom" id="o1s-ku-2e1"/>
+                            <constraint firstItem="l5h-eI-1Ng" firstAttribute="leading" secondItem="tO3-Ou-6tm" secondAttribute="leadingMargin" id="wgy-Df-eiu"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="gpm-Br-cb7"/>
+                                <exclude reference="l5h-eI-1Ng"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="KIu-Uv-eY1"/>
-                                <exclude reference="Tqf-IF-2hW"/>
+                                <exclude reference="WuM-Vk-Gq1"/>
+                                <exclude reference="o1s-ku-2e1"/>
+                                <exclude reference="wgy-Df-eiu"/>
+                                <exclude reference="cqV-9e-MhL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="gpm-Br-cb7"/>
+                                <include reference="l5h-eI-1Ng"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="KIu-Uv-eY1"/>
-                                <include reference="Tqf-IF-2hW"/>
+                                <include reference="WuM-Vk-Gq1"/>
+                                <include reference="o1s-ku-2e1"/>
+                                <include reference="wgy-Df-eiu"/>
+                                <include reference="cqV-9e-MhL"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="l5h-eI-1Ng" id="9Yq-nW-X8x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uyw-JI-oLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2947.5" y="-112.875"/>
         </scene>
-        <!--View Controller-->
+        <!--My Page List View Controller-->
         <scene sceneID="chH-ru-Wv0">
             <objects>
-                <viewController id="yyN-8h-sCc" sceneMemberID="viewController">
+                <viewController id="yyN-8h-sCc" customClass="MyPageListViewController" customModule="instagramer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vGW-dr-GP2"/>
                         <viewControllerLayoutGuide type="bottom" id="90e-Yf-cnk"/>
@@ -327,7 +352,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7HS-0d-IAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2938.5" y="273.75"/>
+            <point key="canvasLocation" x="2947.5" y="293.625"/>
         </scene>
     </scenes>
     <resources>

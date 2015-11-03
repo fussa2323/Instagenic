@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		478AE85B1BE8F97100452247 /* MyPageGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		478AE85D1BE8F99700452247 /* MyPageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478AE85C1BE8F99700452247 /* MyPageListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		47AC50811BD0C1BE00A6C707 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC50801BD0C1BE00A6C707 /* AppDelegate.swift */; };
 		47AC508A1BD0C1BE00A6C707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47AC50891BD0C1BE00A6C707 /* Assets.xcassets */; };
 		47AC508D1BD0C1BE00A6C707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AC508B1BD0C1BE00A6C707 /* LaunchScreen.storyboard */; };
@@ -54,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		159401587A139F7F8EAEED50 /* Pods_instagramer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagramer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageGridViewController.swift; sourceTree = "<group>"; };
+		478AE85C1BE8F99700452247 /* MyPageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageListViewController.swift; sourceTree = "<group>"; };
 		47AC507D1BD0C1BE00A6C707 /* instagramer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagramer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47AC50801BD0C1BE00A6C707 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47AC50891BD0C1BE00A6C707 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		478AE8591BE8F88500452247 /* sub5 */ = {
+			isa = PBXGroup;
+			children = (
+				478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */,
+				478AE85C1BE8F99700452247 /* MyPageListViewController.swift */,
+			);
+			name = sub5;
+			sourceTree = "<group>";
+		};
 		47AC50741BD0C1BE00A6C707 = {
 			isa = PBXGroup;
 			children = (
@@ -255,23 +268,24 @@
 			children = (
 				47AC50C61BD22F9E00A6C707 /* TabBarController.swift */,
 				47DC4D3D1BE34AB30043C7F5 /* FeedViewController.swift */,
-				47DC4D501BE4ABE60043C7F5 /* sub */,
+				47DC4D501BE4ABE60043C7F5 /* sub1 */,
 				47DC4D411BE34DDF0043C7F5 /* SearchViewController.swift */,
 				47DC4D431BE34E4E0043C7F5 /* AlbumCollectionViewController.swift */,
 				47DC4D491BE35E2C0043C7F5 /* HashTagTableViewController.swift */,
 				47DC4D451BE34E8A0043C7F5 /* MyPageViewController.swift */,
+				478AE8591BE8F88500452247 /* sub5 */,
 				47AC50C41BD22F3D00A6C707 /* FirstLaunchViewController.swift */,
 				47AC50BE1BD0E96000A6C707 /* LoginViewController.swift */,
 			);
 			name = main;
 			sourceTree = "<group>";
 		};
-		47DC4D501BE4ABE60043C7F5 /* sub */ = {
+		47DC4D501BE4ABE60043C7F5 /* sub1 */ = {
 			isa = PBXGroup;
 			children = (
 				47DC4D511BE4B1BC0043C7F5 /* FormSettingViewController.swift */,
 			);
-			name = sub;
+			name = sub1;
 			sourceTree = "<group>";
 		};
 		5B362468E9941ACA35C2EA78 /* Pods */ = {
@@ -481,7 +495,9 @@
 			files = (
 				47DC4D521BE4B1BC0043C7F5 /* FormSettingViewController.swift in Sources */,
 				47DC4D4D1BE362E60043C7F5 /* UIColoer+.swift in Sources */,
+				478AE85D1BE8F99700452247 /* MyPageListViewController.swift in Sources */,
 				47AC50C51BD22F3D00A6C707 /* FirstLaunchViewController.swift in Sources */,
+				478AE85B1BE8F97100452247 /* MyPageGridViewController.swift in Sources */,
 				47AC50C71BD22F9E00A6C707 /* TabBarController.swift in Sources */,
 				47DC4D421BE34DDF0043C7F5 /* SearchViewController.swift in Sources */,
 				47DC4D441BE34E4E0043C7F5 /* AlbumCollectionViewController.swift in Sources */,
