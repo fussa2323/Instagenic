@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (2.0.2)
+  - Eureka (1.1.0)
   - MotionBlur (0.2.0)
   - ObjectMapper (0.19)
   - Realm (0.96.0):
@@ -12,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 2.0)
+  - Eureka (~> 1.0)
   - MotionBlur
   - ObjectMapper (~> 0.19)
   - RealmSwift
@@ -20,6 +22,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
+  Eureka: 9b198a9f4098a1e75df31dde502105bc0b7e305b
   MotionBlur: 5dc5583a725f087bdf952278b1c41b7bb7ba5f79
   ObjectMapper: a88114e5df20f055da63029f25cbc01014847c91
   Realm: d1b1eff5264cd6a3158b7a9b6c499d7f6ad3a860

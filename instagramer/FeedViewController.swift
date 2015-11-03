@@ -13,21 +13,24 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Feed"
+        
+//        let leftBarButton = UIBarButtonItem(title: "premium", style: .Plain, target: self, action: "tappedLeftBarButton")
+//        let rightBarButton = UIBarButtonItem(title: "Setting", style: .Plain, target: self, action: "tappedRightBarButton")
+//        
+//        self.navigationItem.leftBarButtonItem = leftBarButton
+//        self.navigationItem.rightBarButtonItem = rightBarButton
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+//        self.navigationController?.navigationBar.barTintColor = UIColor.mainColor()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tappedRightBarButton() {
+//        let nextPage = FormSettingViewController(coder: NSCoder())
+//        self.navigationController?.pushViewController(nextPage!, animated: true)
     }
-    */
 
 }

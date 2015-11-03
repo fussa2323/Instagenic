@@ -15,6 +15,8 @@ target 'instagramer' do
   # pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
   pod 'MotionBlur'
   pod 'RealmSwift'
+#  pod 'SwiftForms'
+  pod 'Eureka', '~> 1.0'
 end
 
 target 'instagramerTests' do
