@@ -9,26 +9,36 @@
 import UIKit
 
 class MyPageViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var segmentedControll: UISegmentedControl!
+    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var secondView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "MyPage"
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+        self.firstView.hidden = false
+        self.secondView.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func indexChanged(sender: AnyObject) {
+        switch segmentedControll.selectedSegmentIndex {
+        case 0:
+            firstView.hidden = false
+            secondView.hidden = true
+        case 1:
+            firstView.hidden = true
+            secondView.hidden = false
+        default:
+            break
+        }
     }
-    */
-
+    
 }
