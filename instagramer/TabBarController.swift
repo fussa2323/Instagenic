@@ -21,8 +21,8 @@ class TabBarController: UITabBarController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         if !isLogin {
-//            isLogin = !isLogin
-//            self.segueToFirstLaunch()
+            isLogin = !isLogin
+            self.segueToFirstLaunch()
         }
     }
 

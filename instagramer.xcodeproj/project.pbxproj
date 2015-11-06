@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		478AE85B1BE8F97100452247 /* MyPageGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		478AE85D1BE8F99700452247 /* MyPageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478AE85C1BE8F99700452247 /* MyPageListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		478AE85F1BE9049000452247 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478AE85E1BE9049000452247 /* GridCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		47AC50811BD0C1BE00A6C707 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC50801BD0C1BE00A6C707 /* AppDelegate.swift */; };
 		47AC508A1BD0C1BE00A6C707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47AC50891BD0C1BE00A6C707 /* Assets.xcassets */; };
 		47AC508D1BD0C1BE00A6C707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AC508B1BD0C1BE00A6C707 /* LaunchScreen.storyboard */; };
@@ -58,6 +59,7 @@
 		159401587A139F7F8EAEED50 /* Pods_instagramer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagramer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageGridViewController.swift; sourceTree = "<group>"; };
 		478AE85C1BE8F99700452247 /* MyPageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageListViewController.swift; sourceTree = "<group>"; };
+		478AE85E1BE9049000452247 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
 		47AC507D1BD0C1BE00A6C707 /* instagramer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagramer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47AC50801BD0C1BE00A6C707 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47AC50891BD0C1BE00A6C707 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */,
 				478AE85C1BE8F99700452247 /* MyPageListViewController.swift */,
+				478AE85E1BE9049000452247 /* GridCollectionViewCell.swift */,
 			);
 			name = sub5;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				47DC4D4D1BE362E60043C7F5 /* UIColoer+.swift in Sources */,
 				478AE85D1BE8F99700452247 /* MyPageListViewController.swift in Sources */,
 				47AC50C51BD22F3D00A6C707 /* FirstLaunchViewController.swift in Sources */,
+				478AE85F1BE9049000452247 /* GridCollectionViewCell.swift in Sources */,
 				478AE85B1BE8F97100452247 /* MyPageGridViewController.swift in Sources */,
 				47AC50C71BD22F9E00A6C707 /* TabBarController.swift in Sources */,
 				47DC4D421BE34DDF0043C7F5 /* SearchViewController.swift in Sources */,
