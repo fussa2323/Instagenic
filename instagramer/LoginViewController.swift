@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        webView.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
