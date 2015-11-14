@@ -7,21 +7,26 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
+import Alamofire
+import SwiftyJSON
+import ObjectMapper
 
 class TabBarController: UITabBarController {
 
     let NSUSERDEFAULT_FIRST_TIME = "isFirstTimeDone"
     var isLogin = false
+    var user: User? 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         if !isLogin {
-            isLogin = !isLogin
+//            isLogin = !isLogin
             self.segueToFirstLaunch()
         }
     }

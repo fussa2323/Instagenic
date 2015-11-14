@@ -28,7 +28,6 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         webView.hidden = true
-        //
         NSURLCache.sharedURLCache().removeAllCachedResponses()
         if let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies {
             for cookie in cookies {
@@ -45,6 +44,14 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            let TabbarController = segue.destinationViewController as! TabBarController
+            if let dic = sender?.valueForKey("user") {
+                let user = Mapper<User>().map(dic)
+                TabbarController.user = user
+        }
+    }
     
 }
 
@@ -68,7 +75,7 @@ extension LoginViewController: UIWebViewDelegate {
         
         Alamofire.request(.POST, request.URLString, parameters: request.Params)
             .responseJSON {
-                (_, _, result) in
+                (_, response, result) in
                 switch result {
                 case .Success(let jsonObject):
                     let json = JSON(jsonObject)
@@ -81,13 +88,14 @@ extension LoginViewController: UIWebViewDelegate {
                             let realm = try Realm()
                             try realm.write({ () -> Void in
                                 realm.add(user!)
+                                print("\(user?.accessToken) : \(user?.userID)")
                             })
                         }
                         catch {
                             print("Realm save error...")
                         }
                         
-//                        self.performSegueWithIdentifier("unwindToPhotoBrowser", sender: ["user": user])
+                        self.performSegueWithIdentifier("unwindToPhotoBrowser", sender: ["user": dic])
                     }
                 case .Failure:
                     break;
