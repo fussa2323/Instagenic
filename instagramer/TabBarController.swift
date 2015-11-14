@@ -31,12 +31,12 @@ class TabBarController: UITabBarController {
             isLogin = false
         } else {
             print("Logged in!")
-            self.user = realm.objects(User)[3]
+            self.user = realm.objects(User)[0]
             print("Login user : \(self.user)")
         }
         
         //logout nortificationの登録
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "logout:", name: "logout", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "logout", name: "logout", object: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -61,17 +61,16 @@ class TabBarController: UITabBarController {
     }
     
     func logout() {
-        for i in 0...realm.objects(User).count{
             do {
-                let user = realm.objects(User)[i]
                 try realm.write({ () -> Void in
-                    self.realm.delete(user)
+                    self.realm.deleteAll()
                 })
             }
             catch {
                 print("Realm delete error...")
             }
-        }
+        
+        self.isLogin = false
         self.checkLoginStatus()
     }
     

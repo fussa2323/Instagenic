@@ -53,6 +53,13 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func unwindToTopPage() {
+        let storyboard: UIStoryboard = UIStoryboard(name: "TabBar", bundle: nil)
+        let TabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBar")
+        TabBarController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        self.presentViewController(TabBarController, animated: true, completion: nil)
+    }
+    
 }
 
 extension LoginViewController: UIWebViewDelegate {
@@ -81,14 +88,8 @@ extension LoginViewController: UIWebViewDelegate {
                     let json = JSON(jsonObject)
                     
                     if let accessToken = json["access_token"].string, userID = json["user"]["id"].string {
-                        print("accessToken : ")
-                        debugPrint(accessToken)
                         let dic = ["accessToken": accessToken, "userID": userID]
-                        print("dic : ")
-                        print(dic)
                         let user = Mapper<User>().map(dic)
-                        print("user :")
-                        print(user)
                         do {
                             let realm = try Realm()
                             try realm.write({ () -> Void in
@@ -100,9 +101,9 @@ extension LoginViewController: UIWebViewDelegate {
                             print("Realm save error...")
                         }
                         
-//                        self.performSegueWithIdentifier("unwindToPhotoBrowser", sender: ["user": user])
-                        self.dismissViewControllerAnimated(true, completion: nil)
-                        
+                        self.unwindToTopPage()
+//                        self.performSegueWithIdentifier("unwindToPhotoBrowser", sender: ["user": dic])
+//                        self.dismissViewControllerAnimated(true, completion: nil)
                     }
                 case .Failure:
                     break;
