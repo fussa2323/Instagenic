@@ -195,7 +195,11 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="4z6-37-CM8"/>
+                    <navigationItem key="navigationItem" id="4z6-37-CM8">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="57U-oK-pj5">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="firstView" destination="1cm-03-hdw" id="jrM-JY-kJu"/>
                         <outlet property="secondView" destination="6k6-m8-cHj" id="p1G-Bs-P6a"/>
