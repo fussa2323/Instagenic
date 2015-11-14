@@ -28,7 +28,6 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         webView.hidden = true
-        //
         NSURLCache.sharedURLCache().removeAllCachedResponses()
         if let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies {
             for cookie in cookies {
@@ -45,6 +44,21 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            let TabbarController = segue.destinationViewController as! TabBarController
+            if let dic = sender?.valueForKey("user") {
+                let user = Mapper<User>().map(dic)
+                TabbarController.user = user
+        }
+    }
+    
+    func unwindToTopPage() {
+        let storyboard: UIStoryboard = UIStoryboard(name: "TabBar", bundle: nil)
+        let TabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBar")
+        TabBarController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        self.presentViewController(TabBarController, animated: true, completion: nil)
+    }
     
 }
 
@@ -68,26 +82,28 @@ extension LoginViewController: UIWebViewDelegate {
         
         Alamofire.request(.POST, request.URLString, parameters: request.Params)
             .responseJSON {
-                (_, _, result) in
+                (_, response, result) in
                 switch result {
                 case .Success(let jsonObject):
                     let json = JSON(jsonObject)
                     
                     if let accessToken = json["access_token"].string, userID = json["user"]["id"].string {
-                        let dic = ["access_token": accessToken, "userID": userID]
+                        let dic = ["accessToken": accessToken, "userID": userID]
                         let user = Mapper<User>().map(dic)
-                        
                         do {
                             let realm = try Realm()
                             try realm.write({ () -> Void in
                                 realm.add(user!)
+                                print("\(user?.accessToken) : \(user?.userID)")
                             })
                         }
                         catch {
                             print("Realm save error...")
                         }
                         
-//                        self.performSegueWithIdentifier("unwindToPhotoBrowser", sender: ["user": user])
+                        self.unwindToTopPage()
+//                        self.performSegueWithIdentifier("unwindToPhotoBrowser", sender: ["user": dic])
+//                        self.dismissViewControllerAnimated(true, completion: nil)
                     }
                 case .Failure:
                     break;

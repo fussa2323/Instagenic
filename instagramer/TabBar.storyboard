@@ -17,7 +17,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="pc0-G0-mVC">
             <objects>
-                <tabBarController id="ZUl-xh-gkx" customClass="TabBarController" customModule="instagramer" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" id="ZUl-xh-gkx" customClass="TabBarController" customModule="instagramer" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="irb-rD-IwB">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
