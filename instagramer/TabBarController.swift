@@ -20,6 +20,7 @@ class TabBarController: UITabBarController {
     var user: User?
     let realm = try! Realm()
     
+    // MARK: Life-cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,14 +37,35 @@ class TabBarController: UITabBarController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        self.checkLoginStatus()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    
+    // MARK: Login/Logout
+    func checkLoginStatus(){
         if !isLogin {
             self.segueToFirstLaunch()
             isLogin = !isLogin
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    func logout() {
+        for i in 0...realm.objects(User).count{
+            do {
+                let user = realm.objects(User)[i]
+                try realm.write({ () -> Void in
+                    self.realm.delete(user)
+                })
+            }
+            catch {
+                print("Realm delete error...")
+            }
+        }
+        self.checkLoginStatus()
     }
     
     //---------------------------
