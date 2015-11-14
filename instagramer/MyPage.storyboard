@@ -198,6 +198,9 @@
                     <navigationItem key="navigationItem" id="4z6-37-CM8">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="57U-oK-pj5">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="logoutButtonAction:" destination="kLo-A4-R0K" id="NLd-E9-N3q"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

@@ -20,7 +20,10 @@ class TabBarController: UITabBarController {
     var user: User?
     let realm = try! Realm()
     
+    //---------------------------
     // MARK: Life-cycle
+    //---------------------------
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +35,8 @@ class TabBarController: UITabBarController {
             print("Login user : \(self.user)")
         }
         
+        //logout nortificationの登録
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "logout:", name: "logout", object: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -44,8 +49,10 @@ class TabBarController: UITabBarController {
         super.didReceiveMemoryWarning()
     }
     
-    
+    //---------------------------
     // MARK: Login/Logout
+    //---------------------------
+    
     func checkLoginStatus(){
         if !isLogin {
             self.segueToFirstLaunch()

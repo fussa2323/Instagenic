@@ -41,4 +41,10 @@ class MyPageViewController: UIViewController {
         }
     }
     
+    @IBAction func logoutButtonAction(sender: AnyObject) {
+        //TabBaControllerのlogoutメソッドの呼び出し
+        let n : NSNotification = NSNotification(name: "logout", object: self)
+        NSNotificationCenter.defaultCenter().postNotification(n)
+    }
+    
 }
