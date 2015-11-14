@@ -27,8 +27,8 @@ class TabBarController: UITabBarController {
             isLogin = false
         } else {
             print("Logged in!")
-            self.user = realm.objects(User)[0]
-            print(self.user)
+            self.user = realm.objects(User)[3]
+            print("Login user : \(self.user)")
         }
         
     }

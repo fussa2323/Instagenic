@@ -81,9 +81,14 @@ extension LoginViewController: UIWebViewDelegate {
                     let json = JSON(jsonObject)
                     
                     if let accessToken = json["access_token"].string, userID = json["user"]["id"].string {
-                        let dic = ["access_token": accessToken, "userID": userID]
+                        print("accessToken : ")
+                        debugPrint(accessToken)
+                        let dic = ["accessToken": accessToken, "userID": userID]
+                        print("dic : ")
+                        print(dic)
                         let user = Mapper<User>().map(dic)
-                        
+                        print("user :")
+                        print(user)
                         do {
                             let realm = try Realm()
                             try realm.write({ () -> Void in
