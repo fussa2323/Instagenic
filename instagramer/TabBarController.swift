@@ -16,18 +16,29 @@ import ObjectMapper
 class TabBarController: UITabBarController {
 
     let NSUSERDEFAULT_FIRST_TIME = "isFirstTimeDone"
-    var isLogin = false
-    var user: User? 
+    var isLogin = true
+    var user: User?
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if realm.objects(User).isEmpty {
+            isLogin = false
+        } else {
+            print("Logged in!")
+            self.user = realm.objects(User)[0]
+            print(self.user)
+        }
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
         if !isLogin {
-//            isLogin = !isLogin
             self.segueToFirstLaunch()
+            isLogin = !isLogin
         }
     }
 
@@ -42,6 +53,7 @@ class TabBarController: UITabBarController {
     func segueToFirstLaunch() {
         let storyboard: UIStoryboard = UIStoryboard(name: "FirstLaunch", bundle: nil)
         let firstLaunchViewController = storyboard.instantiateViewControllerWithIdentifier("FirstLaunch")
+        firstLaunchViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(firstLaunchViewController, animated: true, completion: nil)
     }
 }

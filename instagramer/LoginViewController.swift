@@ -95,7 +95,9 @@ extension LoginViewController: UIWebViewDelegate {
                             print("Realm save error...")
                         }
                         
-                        self.performSegueWithIdentifier("unwindToPhotoBrowser", sender: ["user": dic])
+//                        self.performSegueWithIdentifier("unwindToPhotoBrowser", sender: ["user": user])
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                        
                     }
                 case .Failure:
                     break;
