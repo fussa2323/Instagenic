@@ -9,18 +9,21 @@
 import UIKit
 
 class GridCollectionViewCell: UICollectionViewCell {
+
+    let imageView = UIImageView()
+    var photo: Photo?
     
-    @IBOutlet weak var image: UIImageView!
-    
-    override init(frame: CGRect){
-        super.init(frame: frame)
-    }
     required init(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)!
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.backgroundColor = UIColor(white: 0.1, alpha: 1.0)
+        
+        imageView.frame = self.bounds
+        addSubview(imageView)
     }
     
 }

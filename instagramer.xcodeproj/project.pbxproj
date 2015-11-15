@@ -130,8 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */,
-				478AE85C1BE8F99700452247 /* MyPageListViewController.swift */,
 				478AE85E1BE9049000452247 /* GridCollectionViewCell.swift */,
+				478AE85C1BE8F99700452247 /* MyPageListViewController.swift */,
 			);
 			name = sub5;
 			sourceTree = "<group>";

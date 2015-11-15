@@ -7,12 +7,27 @@
 //
 
 import UIKit
+import Foundation
+import SwiftyJSON
+import Alamofire
+import FastImageCache
 
 class MyPageGridViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     var images = ["Image-1", "Image-2", "Image-3", "Image-4", "Image-5", "Image-6", "Image-7", "Image-8", "Image-9"]
-
+    let formatName = KMSmallImageFormatName
+    var photos = [Photo]()
+    let refleshControl = UIRefreshControl()
+    var nextURLRequest = NSURLRequest?()
+    let GridViewCellIdentifier = "GridViewCell"
+    let GridViewFooterViewIdentifier = "CridViewFooterView"
+    
+    
+    //---------------------------
+    // MARK: Life - Cycle
+    //---------------------------
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -23,7 +38,10 @@ class MyPageGridViewController: UIViewController, UICollectionViewDataSource, UI
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: - UICollectionViewDelegate Protocol
+    //-------------------------------------------
+    // MARK: UICollectionViewDelegate Protocol
+    //-------------------------------------------
+
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell:GridCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("GridCell", forIndexPath: indexPath) as! GridCollectionViewCell
         let imageName = images[indexPath.row]
@@ -45,5 +63,26 @@ class MyPageGridViewController: UIViewController, UICollectionViewDataSource, UI
         size = CGSize(width: 110, height: 110)
         return size
     }
+    
+    func setupCollectionViewLayout() {
+        let layout = UICollectionViewFlowLayout()
+        let itemWidth = (view.bounds.size.width - 2) / 3
+        layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
+        layout.minimumInteritemSpacing = 1.0
+        layout.minimumLineSpacing = 1.0
+        layout.footerReferenceSize = CGSize(width: collectionView!.bounds.size.width, height: 100.0)
+        collectionView!.collectionViewLayout = layout
+    }
+    
+    func setupView() {
+        setupCollectionViewLayout()
+        collectionView!.registerClass(GridCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: GridViewCellIdentifier)
+        collectionView!.registerClass(PhotoBrowserLoadingCollectionView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: PhotoBrowserFooterViewIdentifier)
+        
+        refreshControl.tintColor = UIColor.whiteColor()
+        refreshControl.addTarget(self, action: "handleRefresh", forControlEvents: .ValueChanged)
+        collectionView!.addSubview(refreshControl)
+    }
+    
 
 }
