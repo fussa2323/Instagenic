@@ -59,6 +59,7 @@
 /* Begin PBXFileReference section */
 		159401587A139F7F8EAEED50 /* Pods_instagramer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagramer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4756FD3B1BF83E9D00B5DAEC /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		4756FD3D1BF8514200B5DAEC /* Instagramer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Instagramer-Bridging-Header.h"; sourceTree = "<group>"; };
 		478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageGridViewController.swift; sourceTree = "<group>"; };
 		478AE85C1BE8F99700452247 /* MyPageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageListViewController.swift; sourceTree = "<group>"; };
 		478AE85E1BE9049000452247 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -258,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				47DC4D4C1BE362E60043C7F5 /* UIColoer+.swift */,
+				4756FD3D1BF8514200B5DAEC /* Instagramer-Bridging-Header.h */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -655,6 +657,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.instagramer.instagramer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Instagramer-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -669,6 +672,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.instagramer.instagramer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Instagramer-Bridging-Header.h";
 			};
 			name = Release;
 		};
