@@ -10,8 +10,8 @@ import Foundation
 import Alamofire
 import ObjectMapper
 import RealmSwift
+import SDWebImage
 
 
 class Photo: Object {
-    
 }

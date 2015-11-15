@@ -16,6 +16,7 @@ target 'instagramer' do
   pod 'MotionBlur'
   pod 'RealmSwift'
   pod 'SDWebImage'
+  pod 'FastImageCache'
 #  pod 'SwiftForms'
   pod 'Eureka', '~> 1.0'
 end
