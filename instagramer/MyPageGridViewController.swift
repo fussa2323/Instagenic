@@ -12,16 +12,16 @@ import SwiftyJSON
 import Alamofire
 import FastImageCache
 
-class MyPageGridViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MyPageGridViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
     var images = ["Image-1", "Image-2", "Image-3", "Image-4", "Image-5", "Image-6", "Image-7", "Image-8", "Image-9"]
     let formatName = KMSmallImageFormatName
     var photos = [Photo]()
-    let refleshControl = UIRefreshControl()
+    let refreshControl = UIRefreshControl()
     var nextURLRequest = NSURLRequest?()
     let GridViewCellIdentifier = "GridViewCell"
-    let GridViewFooterViewIdentifier = "CridViewFooterView"
+    let GridViewFooterViewIdentifier = "GridViewFooterView"
     
     
     //---------------------------
@@ -64,6 +64,10 @@ class MyPageGridViewController: UIViewController, UICollectionViewDataSource, UI
         return size
     }
     
+    //-------------------------------------------
+    // MARK: UICollectionView Setup
+    //-------------------------------------------
+    
     func setupCollectionViewLayout() {
         let layout = UICollectionViewFlowLayout()
         let itemWidth = (view.bounds.size.width - 2) / 3
@@ -77,7 +81,7 @@ class MyPageGridViewController: UIViewController, UICollectionViewDataSource, UI
     func setupView() {
         setupCollectionViewLayout()
         collectionView!.registerClass(GridCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: GridViewCellIdentifier)
-        collectionView!.registerClass(PhotoBrowserLoadingCollectionView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: PhotoBrowserFooterViewIdentifier)
+        collectionView!.registerClass(GridLoadingCollectionView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: GridViewFooterViewIdentifier)
         
         refreshControl.tintColor = UIColor.whiteColor()
         refreshControl.addTarget(self, action: "handleRefresh", forControlEvents: .ValueChanged)
@@ -85,4 +89,20 @@ class MyPageGridViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
 
+}
+
+class GridLoadingCollectionView: UICollectionReusableView {
+    let spinner = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        spinner.startAnimating()
+        spinner.center = self.center
+        addSubview(spinner)
+    }
 }
