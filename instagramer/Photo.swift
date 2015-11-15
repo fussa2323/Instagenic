@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import Alamofire
+import ObjectMapper
+import RealmSwift
+
+
+class Photo: Object {
+    
+}
