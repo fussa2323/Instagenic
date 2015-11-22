@@ -7,3 +7,25 @@
 //
 
 import Foundation
+import ObjectMapper
+import RealmSwift
+
+class MutedUsers: Object{
+    var instagramId: String = ""
+    var userIds: [User] = []
+    
+    required convenience init?(_ map: Map) {
+        self.init()
+        mapping(map)
+    }
+}
+
+// MARK: - ObjectMapper
+extension MutedUsers : Mappable {
+    
+    func mapping(map: Map) {
+        instagramId <- map["instagramId"]
+        userIds <- map["userIds"]
+    }
+    
+}
