@@ -10,10 +10,10 @@ import Foundation
 import ObjectMapper
 import RealmSwift
 
-class UsersLists: Object{
+class UserLists: Object{
     var instagramId: String = ""
     var listName: String = ""
-    var userIds: [User] = []
+    var userIds: List<User> = List<User>()
     var order: Int = 0
     
     required convenience init?(_ map: Map) {
@@ -23,12 +23,11 @@ class UsersLists: Object{
 }
 
 // MARK: - ObjectMapper
-extension UsersLists : Mappable {
+extension UserLists : Mappable {
     
     func mapping(map: Map) {
         instagramId <- map["instagramId"]
         listName <- map["listName"]
-        userIds <- map["userIds"]
         order <- map["order"]
     }
     
