@@ -12,7 +12,7 @@ import RealmSwift
 
 class MutedUsers: Object{
     var instagramId: String = ""
-    var userIds: [User] = []
+    var userIds: List<User> = List<User>()
     
     required convenience init?(_ map: Map) {
         self.init()
@@ -25,7 +25,6 @@ extension MutedUsers : Mappable {
     
     func mapping(map: Map) {
         instagramId <- map["instagramId"]
-        userIds <- map["userIds"]
     }
     
 }
