@@ -16,7 +16,6 @@ import ObjectMapper
 class TabBarController: UITabBarController {
 
     var isLogin = true
-    let realm = try! Realm()
     var currentAccount: Accounts?
     
     //---------------------------
@@ -25,6 +24,7 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         currentAccount = CurrentAccount.sharedController.account
         
         if currentAccount != nil{
@@ -62,11 +62,12 @@ class TabBarController: UITabBarController {
     func logout(){
         
         if let instagramId = CurrentAccount.sharedController.account?.instagramId{
+            let realm = try! Realm()
         
             do {
                 try realm.write({ () -> Void in
-                    let query = self.realm.objects(Accounts).filter("instagramId = '\(instagramId)'")
-                    self.realm.delete(query)
+                    let query = realm.objects(Accounts).filter("instagramId = '\(instagramId)'")
+                    realm.delete(query)
                     self.currentAccount = nil
                 })
             }
@@ -74,11 +75,11 @@ class TabBarController: UITabBarController {
                 print("Realm delete error...")
             }
         
-        if self.realm.objects(Accounts).isEmpty{
+        if realm.objects(Accounts).isEmpty{
             self.isLogin = false
             self.checkLoginStatus()
         } else {
-            CurrentAccount.sharedController.account = self.realm.objects(Accounts)[0]
+            CurrentAccount.sharedController.account = realm.objects(Accounts)[0]
         }
         }
     }

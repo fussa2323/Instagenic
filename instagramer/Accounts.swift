@@ -15,6 +15,7 @@ class Accounts: Object{
     var accessToken: String = ""
     var userName: String = ""
     var profileImage: String = ""
+    var isLastUsed: Bool = false
     
     required convenience init?(_ map: Map) {
         self.init()
@@ -30,6 +31,7 @@ extension Accounts : Mappable {
         accessToken <- map["accessToken"]
         userName <- map["userName"]
         profileImage <- map["profileImage"]
+        isLastUsed <- map["isLastUsed"]
     }
     
 }
