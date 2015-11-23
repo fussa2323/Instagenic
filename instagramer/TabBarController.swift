@@ -15,10 +15,8 @@ import ObjectMapper
 
 class TabBarController: UITabBarController {
 
-    let NSUSERDEFAULT_FIRST_TIME = "isFirstTimeDone"
     var isLogin = true
-    var user: User?
-    let realm = try! Realm()
+    var currentAccount: Accounts?
     
     //---------------------------
     // MARK: Life-cycle
@@ -27,12 +25,14 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if realm.objects(User).isEmpty {
-            isLogin = false
-        } else {
+        currentAccount = CurrentAccount.sharedController.account
+        
+        if currentAccount != nil{
             print("Logged in!")
-            self.user = realm.objects(User)[0]
-            print("Login user : \(self.user)")
+            print("Login user : \(currentAccount)")
+            isLogin = true
+        } else {
+            isLogin = false
         }
         
         //logout nortificationの登録
@@ -56,22 +56,32 @@ class TabBarController: UITabBarController {
     func checkLoginStatus(){
         if !isLogin {
             self.segueToFirstLaunch()
-            isLogin = !isLogin
         }
     }
     
-    func logout() {
+    func logout(){
+        
+        if let instagramId = CurrentAccount.sharedController.account?.instagramId{
+            let realm = try! Realm()
+        
             do {
                 try realm.write({ () -> Void in
-                    self.realm.deleteAll()
+                    let query = realm.objects(Accounts).filter("instagramId = '\(instagramId)'")
+                    realm.delete(query)
+                    self.currentAccount = nil
                 })
             }
             catch {
                 print("Realm delete error...")
             }
         
-        self.isLogin = false
-        self.checkLoginStatus()
+        if realm.objects(Accounts).isEmpty{
+            self.isLogin = false
+            self.checkLoginStatus()
+        } else {
+            CurrentAccount.sharedController.account = realm.objects(Accounts)[0]
+        }
+        }
     }
     
     //---------------------------

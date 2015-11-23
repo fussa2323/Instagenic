@@ -1,8 +1,8 @@
 //
-//  User.swift
+//  Album.swift
 //  instagramer
 //
-//  Created by Yohei Fusayasu on 10/16/15.
+//  Created by Yohei Fusayasu on 11/22/15.
 //  Copyright © 2015 instagramers. All rights reserved.
 //
 
@@ -10,10 +10,10 @@ import Foundation
 import ObjectMapper
 import RealmSwift
 
-class User: Object{
+class Album: Object{
     var instagramId: String = ""
-    var userName: String = ""
-    var profileImage: String = ""
+    var title: String = ""
+    var medias = List<Media>()
     
     required convenience init?(_ map: Map) {
         self.init()
@@ -22,12 +22,11 @@ class User: Object{
 }
 
 // MARK: - ObjectMapper
-extension User : Mappable {
+extension Album : Mappable {
     
     func mapping(map: Map) {
-        instagramId   <- map["instagramId"]
-        userName <- map["userName"]
-        profileImage <- map["profileImage"]
+        instagramId <- map["instagramId"]
+        title <- map["title"]
     }
     
 }

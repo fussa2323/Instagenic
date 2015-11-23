@@ -23,6 +23,12 @@
 		47AC50C11BD0EF2300A6C707 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC50C01BD0EF2300A6C707 /* User.swift */; };
 		47AC50C51BD22F3D00A6C707 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC50C41BD22F3D00A6C707 /* FirstLaunchViewController.swift */; };
 		47AC50C71BD22F9E00A6C707 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC50C61BD22F9E00A6C707 /* TabBarController.swift */; };
+		47B4A0541C01FA480059FEC9 /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B4A0531C01FA480059FEC9 /* Accounts.swift */; };
+		47B4A0561C01FD220059FEC9 /* MutedUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B4A0551C01FD220059FEC9 /* MutedUsers.swift */; };
+		47B4A0581C01FD450059FEC9 /* UserLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B4A0571C01FD450059FEC9 /* UserLists.swift */; };
+		47B4A05A1C01FF2C0059FEC9 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B4A0591C01FF2C0059FEC9 /* Album.swift */; };
+		47B4A05C1C01FF710059FEC9 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B4A05B1C01FF710059FEC9 /* Media.swift */; };
+		47B4A05E1C029A070059FEC9 /* CurrentAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B4A05D1C029A070059FEC9 /* CurrentAccount.swift */; };
 		47DC4D341BE3496C0043C7F5 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DC4D331BE3496C0043C7F5 /* Feed.storyboard */; };
 		47DC4D361BE349740043C7F5 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DC4D351BE349740043C7F5 /* Search.storyboard */; };
 		47DC4D381BE3497E0043C7F5 /* Album.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DC4D371BE3497E0043C7F5 /* Album.storyboard */; };
@@ -82,6 +88,12 @@
 		47AC50C01BD0EF2300A6C707 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		47AC50C41BD22F3D00A6C707 /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = "<group>"; };
 		47AC50C61BD22F9E00A6C707 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		47B4A0531C01FA480059FEC9 /* Accounts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accounts.swift; sourceTree = "<group>"; };
+		47B4A0551C01FD220059FEC9 /* MutedUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutedUsers.swift; sourceTree = "<group>"; };
+		47B4A0571C01FD450059FEC9 /* UserLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLists.swift; sourceTree = "<group>"; };
+		47B4A0591C01FF2C0059FEC9 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		47B4A05B1C01FF710059FEC9 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		47B4A05D1C029A070059FEC9 /* CurrentAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentAccount.swift; sourceTree = "<group>"; };
 		47DC4D331BE3496C0043C7F5 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		47DC4D351BE349740043C7F5 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		47DC4D371BE3497E0043C7F5 /* Album.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Album.storyboard; sourceTree = "<group>"; };
@@ -205,6 +217,12 @@
 			children = (
 				47AC50C01BD0EF2300A6C707 /* User.swift */,
 				4756FD3B1BF83E9D00B5DAEC /* Photo.swift */,
+				47B4A0531C01FA480059FEC9 /* Accounts.swift */,
+				47B4A0551C01FD220059FEC9 /* MutedUsers.swift */,
+				47B4A0571C01FD450059FEC9 /* UserLists.swift */,
+				47B4A0591C01FF2C0059FEC9 /* Album.swift */,
+				47B4A05B1C01FF710059FEC9 /* Media.swift */,
+				47B4A05D1C029A070059FEC9 /* CurrentAccount.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -507,22 +525,28 @@
 			files = (
 				47DC4D521BE4B1BC0043C7F5 /* FormSettingViewController.swift in Sources */,
 				47DC4D4D1BE362E60043C7F5 /* UIColoer+.swift in Sources */,
+				47B4A0581C01FD450059FEC9 /* UserLists.swift in Sources */,
 				478AE85D1BE8F99700452247 /* MyPageListViewController.swift in Sources */,
 				47AC50C51BD22F3D00A6C707 /* FirstLaunchViewController.swift in Sources */,
+				47B4A0561C01FD220059FEC9 /* MutedUsers.swift in Sources */,
+				47B4A05C1C01FF710059FEC9 /* Media.swift in Sources */,
 				478AE85F1BE9049000452247 /* GridCollectionViewCell.swift in Sources */,
 				478AE85B1BE8F97100452247 /* MyPageGridViewController.swift in Sources */,
 				47AC50C71BD22F9E00A6C707 /* TabBarController.swift in Sources */,
 				47DC4D421BE34DDF0043C7F5 /* SearchViewController.swift in Sources */,
 				47DC4D441BE34E4E0043C7F5 /* AlbumCollectionViewController.swift in Sources */,
 				47AC50BB1BD0D5DF00A6C707 /* Instagram.swift in Sources */,
+				47B4A0541C01FA480059FEC9 /* Accounts.swift in Sources */,
 				4756FD3C1BF83E9D00B5DAEC /* Photo.swift in Sources */,
 				47DC4D461BE34E8A0043C7F5 /* MyPageViewController.swift in Sources */,
 				47DC4D4A1BE35E2C0043C7F5 /* HashTagTableViewController.swift in Sources */,
 				47AC50C11BD0EF2300A6C707 /* User.swift in Sources */,
 				47AC50811BD0C1BE00A6C707 /* AppDelegate.swift in Sources */,
 				47AC50BF1BD0E96000A6C707 /* LoginViewController.swift in Sources */,
+				47B4A05A1C01FF2C0059FEC9 /* Album.swift in Sources */,
 				4756FD3F1BF86C4600B5DAEC /* FastImageCacheHelper.swift in Sources */,
 				47DC4D3F1BE34AB30043C7F5 /* FeedViewController.swift in Sources */,
+				47B4A05E1C029A070059FEC9 /* CurrentAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
