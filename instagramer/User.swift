@@ -11,8 +11,9 @@ import ObjectMapper
 import RealmSwift
 
 class User: Object{
-    var userID: String = ""
-    var accessToken: String = ""
+    var instagramId: String = ""
+    var userName: String = ""
+    var profileImage: String = ""
     
     required convenience init?(_ map: Map) {
         self.init()
@@ -24,8 +25,9 @@ class User: Object{
 extension User : Mappable {
     
     func mapping(map: Map) {
-        userID   <- map["userID"]
-        accessToken <- map["accessToken"]
+        instagramId   <- map["instagramId"]
+        userName <- map["userName"]
+        profileImage <- map["profileImage"]
     }
     
 }
