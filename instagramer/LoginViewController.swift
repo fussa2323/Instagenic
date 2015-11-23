@@ -49,7 +49,6 @@ class LoginViewController: UIViewController {
             let TabbarController = segue.destinationViewController as! TabBarController
             if let dic = sender?.valueForKey("user") {
                 let user = Mapper<User>().map(dic)
-                TabbarController.user = user
         }
     }
     
@@ -87,19 +86,22 @@ extension LoginViewController: UIWebViewDelegate {
                 case .Success(let jsonObject):
                     let json = JSON(jsonObject)
                     
-                    if let accessToken = json["access_token"].string, userID = json["user"]["id"].string {
-                        let dic = ["accessToken": accessToken, "userID": userID]
-                        let user = Mapper<User>().map(dic)
+                    if let accessToken = json["access_token"].string, instagramId = json["user"]["id"].string, userName = json["user"]["username"].string, profileImage = json["user"]["profile_picture"].string  {
+                        let dic = ["accessToken": accessToken, "instagramId": instagramId, "userName": userName, "profileImage": profileImage]
+                        let account = Mapper<Accounts>().map(dic)
                         do {
                             let realm = try Realm()
                             try realm.write({ () -> Void in
-                                realm.add(user!)
-                                print("\(user?.accessToken) : \(user?.userID)")
+                                realm.add(account!)
+                                print("\(account?.accessToken) : \(account?.instagramId)")
                             })
                         }
                         catch {
                             print("Realm save error...")
                         }
+                        
+                        //現在のアカウントに設定
+                        CurrentAccount.sharedController.account = account!
                         
                         self.unwindToTopPage()
 //                        self.performSegueWithIdentifier("unwindToPhotoBrowser", sender: ["user": dic])

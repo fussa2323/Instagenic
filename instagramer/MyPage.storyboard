@@ -236,10 +236,10 @@
             </objects>
             <point key="canvasLocation" x="1219.5" y="76.5"/>
         </scene>
-        <!--My Page Grid View Controller-->
+        <!--View Controller-->
         <scene sceneID="MvU-qM-KoH">
             <objects>
-                <viewController id="N91-2i-D2Q" customClass="MyPageGridViewController" customModule="instagramer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="N91-2i-D2Q" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RsR-Na-EIW"/>
                         <viewControllerLayoutGuide type="bottom" id="F9o-na-3o2"/>
@@ -259,10 +259,6 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
-                                <connections>
-                                    <outlet property="dataSource" destination="N91-2i-D2Q" id="3me-vW-X9H"/>
-                                    <outlet property="delegate" destination="N91-2i-D2Q" id="qNE-8f-wI9"/>
-                                </connections>
                             </collectionView>
                         </subviews>
                         <animations/>
@@ -296,18 +292,15 @@
                             </mask>
                         </variation>
                     </view>
-                    <connections>
-                        <outlet property="collectionView" destination="l5h-eI-1Ng" id="9Yq-nW-X8x"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uyw-JI-oLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2947.5" y="-112.875"/>
         </scene>
-        <!--My Page List View Controller-->
+        <!--View Controller-->
         <scene sceneID="chH-ru-Wv0">
             <objects>
-                <viewController id="yyN-8h-sCc" customClass="MyPageListViewController" customModule="instagramer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yyN-8h-sCc" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vGW-dr-GP2"/>
                         <viewControllerLayoutGuide type="bottom" id="90e-Yf-cnk"/>
