@@ -143,22 +143,22 @@
 		478AE8591BE8F88500452247 /* sub5 */ = {
 			isa = PBXGroup;
 			children = (
-				478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */,
 				478AE85E1BE9049000452247 /* GridCollectionViewCell.swift */,
+				478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */,
 				478AE85C1BE8F99700452247 /* MyPageListViewController.swift */,
 			);
-			name = sub5;
+			path = sub5;
 			sourceTree = "<group>";
 		};
 		47AC50741BD0C1BE00A6C707 = {
 			isa = PBXGroup;
 			children = (
+				802C0448B9A2BE0F499BA8F7 /* Frameworks */,
+				5B362468E9941ACA35C2EA78 /* Pods */,
+				47AC507E1BD0C1BE00A6C707 /* Products */,
 				47AC507F1BD0C1BE00A6C707 /* instagramer */,
 				47AC50961BD0C1BF00A6C707 /* instagramerTests */,
 				47AC50A11BD0C1BF00A6C707 /* instagramerUITests */,
-				47AC507E1BD0C1BE00A6C707 /* Products */,
-				5B362468E9941ACA35C2EA78 /* Pods */,
-				802C0448B9A2BE0F499BA8F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,13 +175,13 @@
 		47AC507F1BD0C1BE00A6C707 /* instagramer */ = {
 			isa = PBXGroup;
 			children = (
-				47AC50801BD0C1BE00A6C707 /* AppDelegate.swift */,
-				47DC4D4B1BE362620043C7F5 /* Utility */,
-				47AC50B51BD0D24500A6C707 /* Request */,
-				47AC50B61BD0D2CB00A6C707 /* Layout */,
 				47AC50B01BD0D16600A6C707 /* Controllers */,
-				47AC50B31BD0D23100A6C707 /* Views */,
+				47AC50B61BD0D2CB00A6C707 /* Layout */,
 				47AC50B11BD0D17700A6C707 /* Models */,
+				47AC50B51BD0D24500A6C707 /* Request */,
+				47DC4D4B1BE362620043C7F5 /* Utility */,
+				47AC50B31BD0D23100A6C707 /* Views */,
+				47AC50801BD0C1BE00A6C707 /* AppDelegate.swift */,
 				47AC50891BD0C1BE00A6C707 /* Assets.xcassets */,
 				47AC508E1BD0C1BE00A6C707 /* Info.plist */,
 			);
@@ -191,8 +191,8 @@
 		47AC50961BD0C1BF00A6C707 /* instagramerTests */ = {
 			isa = PBXGroup;
 			children = (
-				47AC50971BD0C1BF00A6C707 /* instagramerTests.swift */,
 				47AC50991BD0C1BF00A6C707 /* Info.plist */,
+				47AC50971BD0C1BF00A6C707 /* instagramerTests.swift */,
 			);
 			path = instagramerTests;
 			sourceTree = "<group>";
@@ -200,8 +200,8 @@
 		47AC50A11BD0C1BF00A6C707 /* instagramerUITests */ = {
 			isa = PBXGroup;
 			children = (
-				47AC50A21BD0C1BF00A6C707 /* instagramerUITests.swift */,
 				47AC50A41BD0C1BF00A6C707 /* Info.plist */,
+				47AC50A21BD0C1BF00A6C707 /* instagramerUITests.swift */,
 			);
 			path = instagramerUITests;
 			sourceTree = "<group>";
@@ -211,44 +211,44 @@
 			children = (
 				47DC4D4F1BE4ABD90043C7F5 /* main */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		47AC50B11BD0D17700A6C707 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				47AC50C01BD0EF2300A6C707 /* User.swift */,
-				4756FD3B1BF83E9D00B5DAEC /* Photo.swift */,
 				47B4A0531C01FA480059FEC9 /* Accounts.swift */,
-				47B4A0551C01FD220059FEC9 /* MutedUsers.swift */,
-				47B4A0571C01FD450059FEC9 /* UserLists.swift */,
 				47B4A0591C01FF2C0059FEC9 /* Album.swift */,
-				47B4A05B1C01FF710059FEC9 /* Media.swift */,
 				47B4A05D1C029A070059FEC9 /* CurrentAccount.swift */,
+				47B4A05B1C01FF710059FEC9 /* Media.swift */,
+				47B4A0551C01FD220059FEC9 /* MutedUsers.swift */,
+				4756FD3B1BF83E9D00B5DAEC /* Photo.swift */,
+				47AC50C01BD0EF2300A6C707 /* User.swift */,
+				47B4A0571C01FD450059FEC9 /* UserLists.swift */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		47AC50B31BD0D23100A6C707 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		47AC50B41BD0D23B00A6C707 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				47DC4D3B1BE349B00043C7F5 /* TabBar.storyboard */,
-				47DC4D331BE3496C0043C7F5 /* Feed.storyboard */,
-				47DC4D351BE349740043C7F5 /* Search.storyboard */,
 				47DC4D371BE3497E0043C7F5 /* Album.storyboard */,
-				47DC4D471BE35E000043C7F5 /* HashTag.storyboard */,
-				47DC4D391BE349860043C7F5 /* MyPage.storyboard */,
-				47AC508B1BD0C1BE00A6C707 /* LaunchScreen.storyboard */,
+				47DC4D331BE3496C0043C7F5 /* Feed.storyboard */,
 				47AC50BC1BD0E72A00A6C707 /* FirstLaunch.storyboard */,
+				47DC4D471BE35E000043C7F5 /* HashTag.storyboard */,
+				47AC508B1BD0C1BE00A6C707 /* LaunchScreen.storyboard */,
+				47DC4D391BE349860043C7F5 /* MyPage.storyboard */,
+				47DC4D351BE349740043C7F5 /* Search.storyboard */,
+				47DC4D3B1BE349B00043C7F5 /* TabBar.storyboard */,
 			);
-			name = Storyboards;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		47AC50B51BD0D24500A6C707 /* Request */ = {
@@ -257,17 +257,17 @@
 				47AC50BA1BD0D5DF00A6C707 /* Instagram.swift */,
 				47B4A05F1C02DBE50059FEC9 /* InstagramApiClient.swift */,
 			);
-			name = Request;
+			path = Request;
 			sourceTree = "<group>";
 		};
 		47AC50B61BD0D2CB00A6C707 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
 				47DC4D4E1BE4ABC50043C7F5 /* PageMenu */,
-				47AC50B71BD0D2DF00A6C707 /* XIB */,
 				47AC50B41BD0D23B00A6C707 /* Storyboards */,
+				47AC50B71BD0D2DF00A6C707 /* XIB */,
 			);
-			name = Layout;
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		47AC50B71BD0D2DF00A6C707 /* XIB */ = {
@@ -275,41 +275,41 @@
 			children = (
 				47DC4D3E1BE34AB30043C7F5 /* FeedViewController.xib */,
 			);
-			name = XIB;
+			path = XIB;
 			sourceTree = "<group>";
 		};
 		47DC4D4B1BE362620043C7F5 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				47DC4D4C1BE362E60043C7F5 /* UIColoer+.swift */,
-				4756FD3D1BF8514200B5DAEC /* Instagramer-Bridging-Header.h */,
 				4756FD3E1BF86C4600B5DAEC /* FastImageCacheHelper.swift */,
+				4756FD3D1BF8514200B5DAEC /* Instagramer-Bridging-Header.h */,
+				47DC4D4C1BE362E60043C7F5 /* UIColoer+.swift */,
 			);
-			name = Utility;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		47DC4D4E1BE4ABC50043C7F5 /* PageMenu */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = PageMenu;
+			path = PageMenu;
 			sourceTree = "<group>";
 		};
 		47DC4D4F1BE4ABD90043C7F5 /* main */ = {
 			isa = PBXGroup;
 			children = (
-				47AC50C61BD22F9E00A6C707 /* TabBarController.swift */,
-				47DC4D3D1BE34AB30043C7F5 /* FeedViewController.swift */,
 				47DC4D501BE4ABE60043C7F5 /* sub1 */,
-				47DC4D411BE34DDF0043C7F5 /* SearchViewController.swift */,
-				47DC4D431BE34E4E0043C7F5 /* AlbumCollectionViewController.swift */,
-				47DC4D491BE35E2C0043C7F5 /* HashTagTableViewController.swift */,
-				47DC4D451BE34E8A0043C7F5 /* MyPageViewController.swift */,
 				478AE8591BE8F88500452247 /* sub5 */,
+				47DC4D431BE34E4E0043C7F5 /* AlbumCollectionViewController.swift */,
+				47DC4D3D1BE34AB30043C7F5 /* FeedViewController.swift */,
 				47AC50C41BD22F3D00A6C707 /* FirstLaunchViewController.swift */,
+				47DC4D491BE35E2C0043C7F5 /* HashTagTableViewController.swift */,
 				47AC50BE1BD0E96000A6C707 /* LoginViewController.swift */,
+				47DC4D451BE34E8A0043C7F5 /* MyPageViewController.swift */,
+				47DC4D411BE34DDF0043C7F5 /* SearchViewController.swift */,
+				47AC50C61BD22F9E00A6C707 /* TabBarController.swift */,
 			);
-			name = main;
+			path = main;
 			sourceTree = "<group>";
 		};
 		47DC4D501BE4ABE60043C7F5 /* sub1 */ = {
@@ -317,7 +317,7 @@
 			children = (
 				47DC4D511BE4B1BC0043C7F5 /* FormSettingViewController.swift */,
 			);
-			name = sub1;
+			path = sub1;
 			sourceTree = "<group>";
 		};
 		5B362468E9941ACA35C2EA78 /* Pods */ = {
@@ -592,6 +592,7 @@
 				47AC508C1BD0C1BE00A6C707 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
