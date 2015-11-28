@@ -184,6 +184,7 @@
 				47AC50801BD0C1BE00A6C707 /* AppDelegate.swift */,
 				47AC50891BD0C1BE00A6C707 /* Assets.xcassets */,
 				47AC508E1BD0C1BE00A6C707 /* Info.plist */,
+				4756FD3D1BF8514200B5DAEC /* Instagramer-Bridging-Header.h */,
 			);
 			path = instagramer;
 			sourceTree = "<group>";
@@ -282,7 +283,6 @@
 			isa = PBXGroup;
 			children = (
 				4756FD3E1BF86C4600B5DAEC /* FastImageCacheHelper.swift */,
-				4756FD3D1BF8514200B5DAEC /* Instagramer-Bridging-Header.h */,
 				47DC4D4C1BE362E60043C7F5 /* UIColoer+.swift */,
 			);
 			path = Utility;

@@ -19,7 +19,7 @@ target 'instagramer' do
   pod 'FastImageCache'
 #  pod 'SwiftForms'
   pod 'Eureka', '~> 1.0'
-  pod 'APIKit', '1.0.0-beta4'
+  pod 'APIKit', '1.0.0'
   pod 'Himotoki', '~> 1.3'
 end
 
