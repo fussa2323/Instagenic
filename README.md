@@ -1,11 +1,12 @@
 # Instagenic
-## Instagram Integration app in Swift
+ Instagram Integration app in Swift
 
 # Features
-+ List View 
-+ User mute
-+ Multiple Accounts
-+ Save photos to your Album or iPhone
++ List view 
++ Mute users/photos
++ Multiple accounts
++ Save photos to your Album
++ Download photos to your iPhone
 
 # How to build
 
