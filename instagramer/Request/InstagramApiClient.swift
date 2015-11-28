@@ -10,17 +10,17 @@ import Foundation
 import APIKit
 import Himotoki
 
-protocol GitHubRequestType: RequestType {
+protocol InstagramRequestType: RequestType {
     
 }
 
-extension GitHubRequestType {
+extension InstagramRequestType {
     var baseURL: NSURL {
-        return NSURL(string: "https://api.github.com")!
+        return NSURL(string: "https://api.instagram.com")!
     }
 }
 
-struct GetRateLimitRequest: GitHubRequestType {
+struct GetRateLimitRequest: InstagramRequestType {
     typealias Response = RateLimit
     
     var method: HTTPMethod {
