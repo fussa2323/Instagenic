@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		474C6EA01C0DE4C800A54D32 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C6E9F1C0DE4C800A54D32 /* SearchResultViewController.swift */; };
 		4756FD3C1BF83E9D00B5DAEC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756FD3B1BF83E9D00B5DAEC /* Photo.swift */; };
 		4756FD3F1BF86C4600B5DAEC /* FastImageCacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756FD3E1BF86C4600B5DAEC /* FastImageCacheHelper.swift */; };
 		478AE85B1BE8F97100452247 /* MyPageGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */; };
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		159401587A139F7F8EAEED50 /* Pods_instagramer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagramer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		474C6E9F1C0DE4C800A54D32 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		4756FD3B1BF83E9D00B5DAEC /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		4756FD3D1BF8514200B5DAEC /* Instagramer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Instagramer-Bridging-Header.h"; sourceTree = "<group>"; };
 		4756FD3E1BF86C4600B5DAEC /* FastImageCacheHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastImageCacheHelper.swift; sourceTree = "<group>"; };
@@ -140,13 +142,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		478AE8591BE8F88500452247 /* sub5 */ = {
+		474C6E9E1C0DE4AE00A54D32 /* sub2 */ = {
+			isa = PBXGroup;
+			children = (
+				474C6E9F1C0DE4C800A54D32 /* SearchResultViewController.swift */,
+			);
+			name = sub2;
+			sourceTree = "<group>";
+		};
+		478AE8591BE8F88500452247 /* sub4 */ = {
 			isa = PBXGroup;
 			children = (
 				478AE85E1BE9049000452247 /* GridCollectionViewCell.swift */,
 				478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */,
 				478AE85C1BE8F99700452247 /* MyPageListViewController.swift */,
 			);
+			name = sub4;
 			path = sub5;
 			sourceTree = "<group>";
 		};
@@ -299,7 +310,8 @@
 			isa = PBXGroup;
 			children = (
 				47DC4D501BE4ABE60043C7F5 /* sub1 */,
-				478AE8591BE8F88500452247 /* sub5 */,
+				474C6E9E1C0DE4AE00A54D32 /* sub2 */,
+				478AE8591BE8F88500452247 /* sub4 */,
 				47DC4D431BE34E4E0043C7F5 /* AlbumCollectionViewController.swift */,
 				47DC4D3D1BE34AB30043C7F5 /* FeedViewController.swift */,
 				47AC50C41BD22F3D00A6C707 /* FirstLaunchViewController.swift */,
@@ -550,6 +562,7 @@
 				47B4A05A1C01FF2C0059FEC9 /* Album.swift in Sources */,
 				4756FD3F1BF86C4600B5DAEC /* FastImageCacheHelper.swift in Sources */,
 				47DC4D3F1BE34AB30043C7F5 /* FeedViewController.swift in Sources */,
+				474C6EA01C0DE4C800A54D32 /* SearchResultViewController.swift in Sources */,
 				47B4A05E1C029A070059FEC9 /* CurrentAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

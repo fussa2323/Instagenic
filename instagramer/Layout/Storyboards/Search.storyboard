@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9du-Cv-zza">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Search View Controller-->
@@ -65,15 +66,47 @@
         <!--View Controller-->
         <scene sceneID="CLz-Gc-2hu">
             <objects>
-                <viewController id="tm1-wN-wel" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="searchBarTapped" id="tm1-wN-wel" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="foc-Hh-7gZ"/>
                         <viewControllerLayoutGuide type="bottom" id="64a-GV-VoB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hwp-SD-R6f">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2Pi-Dn-0sZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <animations/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Pi-Dn-0sZ" firstAttribute="leading" secondItem="Hwp-SD-R6f" secondAttribute="leadingMargin" constant="-20" id="Yww-Be-XDi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Pi-Dn-0sZ" secondAttribute="trailing" constant="-20" id="acd-Fw-Zsa"/>
+                            <constraint firstItem="2Pi-Dn-0sZ" firstAttribute="top" secondItem="foc-Hh-7gZ" secondAttribute="bottom" id="kOV-zO-u5C"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="2Pi-Dn-0sZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Yww-Be-XDi"/>
+                                <exclude reference="acd-Fw-Zsa"/>
+                                <exclude reference="kOV-zO-u5C"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="2Pi-Dn-0sZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Yww-Be-XDi"/>
+                                <include reference="acd-Fw-Zsa"/>
+                                <include reference="kOV-zO-u5C"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="searchDisplayController" destination="hEa-Oy-fPM" id="8BY-kW-G82"/>

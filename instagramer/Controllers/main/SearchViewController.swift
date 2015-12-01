@@ -17,7 +17,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
         
-        // UISearchBar---------------
+        // UISearchBar Config---------------
 
         let uiSearchBar : UISearchBar = UISearchBar()
         uiSearchBar.frame = CGRectMake(0,0,300,80)
@@ -35,7 +35,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         self.navigationItem.titleView = uiSearchBar
         self.navigationItem.titleView!.frame = CGRectMake(0, 0, 320, 44);
 
-        // UISearchBar----------------
+        // UISearchBar Config----------------
         
     }
 
@@ -48,18 +48,30 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     //---------------------------
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        <#code#>
+        
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        <#code#>
+        
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        <#code#>
+        
     }
     
     func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
-        <#code#>
+        self.modalToSearchResultViewController()
+        return true
+    }
+    
+    //---------------------------
+    //# MARK: - Segue
+    //---------------------------
+    
+    func modalToSearchResultViewController() {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Search", bundle: nil)
+        let searchResultViewController = storyboard.instantiateViewControllerWithIdentifier("searchBarTapped")
+        searchResultViewController.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+        self.presentViewController(searchResultViewController, animated: true, completion: nil)
     }
 }
