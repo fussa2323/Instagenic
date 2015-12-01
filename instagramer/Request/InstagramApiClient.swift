@@ -9,6 +9,7 @@
 import Foundation
 import APIKit
 import Himotoki
+import SwiftyJSON
 
 protocol InstagramRequestType: RequestType {
     
@@ -20,15 +21,15 @@ extension InstagramRequestType {
     }
 }
 
-struct GetRateLimitRequest: InstagramRequestType {
-    typealias Response = RateLimit
+struct GetUserInfoRequest: InstagramRequestType {
+    typealias Response = UserInfo
     
     var method: HTTPMethod {
         return .GET
     }
     
     var path: String {
-        return "/rate_limit"
+        return "/v1/users/\(CurrentAccount.sharedController.account!.instagramId)/?access_token=\(CurrentAccount.sharedController.account!.accessToken)"
     }
     
     func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {
@@ -36,28 +37,41 @@ struct GetRateLimitRequest: InstagramRequestType {
             return nil
         }
         
-        guard let rateLimit = RateLimit(dictionary: dictionary) else {
+        guard let userInfo = UserInfo(dictionary: dictionary) else {
             return nil
         }
         
-        return rateLimit
+        return userInfo
     }
 }
 
-struct RateLimit {
-    let count: Int
-    let resetDate: NSDate
+struct UserInfo {
+    var instagramId: String = ""
+    var userName: String = ""
+    var profileImage: String = ""
+    var isLastUsed: Bool = false
     
     init?(dictionary: [String: AnyObject]) {
-        guard let count = dictionary["rate"]?["limit"] as? Int else {
-            return nil
-        }
+//        guard let instagramId = dictionary["data"]["id"] as? Int else {
+//            throw APIError.ConnectionError(NSError)
+//        }
+//        
+//        guard let userName = dictionary["data"]["username"] as? Int else {
+//            return nil
+//        }
+//        
+//        guard let resetDateString = dictionary["rate"]?["reset"] as? NSTimeInterval else {
+//            return nil
+//        }
         
-        guard let resetDateString = dictionary["rate"]?["reset"] as? NSTimeInterval else {
-            return nil
-        }
-        
-        self.count = count
-        self.resetDate = NSDate(timeIntervalSince1970: resetDateString)
+//        self.instagramId = instagramId
+//        self.resetDate = NSDate(timeIntervalSince1970: resetDateString)
     }
 }
+
+
+enum InitializationError: ErrorType {
+    case instagramId
+}
+
+
