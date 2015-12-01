@@ -37,10 +37,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        Realm.Configuration.defaultConfiguration = config
 //        // Realmファイルを開こうとしたときスキーマバージョンが異なれば、
 //        // 自動的にマイグレーションが実行されます
-//        
-//        let realm = try! Realm()
-//        print(realm.path)
-        // --Realm Migration--
+//  // --Realm Migration--
+        
+        do {
+            let realm = try Realm()
+            print(realm.path)
+        }
+        catch {
+            print("Realm path error...")
+        }
         
         return true
     }
