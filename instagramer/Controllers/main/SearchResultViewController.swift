@@ -10,8 +10,6 @@ import UIKit
 
 class SearchResultViewController: UIViewController, UISearchBarDelegate {
 
-    @IBOutlet weak var uiSearchBar: UISearchBar!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // UISearchBar Config---------------
@@ -26,7 +24,7 @@ class SearchResultViewController: UIViewController, UISearchBarDelegate {
         uiSearchBar.keyboardType = UIKeyboardType.Default // テキスト入力時のキーボードのスタイルを設定
         uiSearchBar.searchBarStyle = UISearchBarStyle.Minimal // バースタイルをDefaultに設定する.
         uiSearchBar.barStyle = UIBarStyle.Default // 検索バーのスタイルを設定
-        uiSearchBar.tintColor = UIColor.mainColor() // 検索バー全体の色を設定
+        uiSearchBar.tintColor = UIColor.whiteColor() // 検索バー全体の色を設定
         
         self.navigationItem.titleView = uiSearchBar
         self.navigationItem.titleView!.frame = CGRectMake(0, 0, 320, 44);
@@ -36,5 +34,25 @@ class SearchResultViewController: UIViewController, UISearchBarDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    //---------------------------
+    // MARK: UISearchBar
+    //---------------------------
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+        return true
     }
 }

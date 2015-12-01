@@ -66,7 +66,7 @@
         <!--Search Result View Controller-->
         <scene sceneID="CLz-Gc-2hu">
             <objects>
-                <viewController storyboardIdentifier="searchBarTapped" id="tm1-wN-wel" customClass="SearchResultViewController" customModule="instagramer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tm1-wN-wel" customClass="SearchResultViewController" customModule="instagramer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="foc-Hh-7gZ"/>
                         <viewControllerLayoutGuide type="bottom" id="64a-GV-VoB"/>
@@ -99,7 +99,7 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="2Pi-Dn-0sZ"/>
+                                <exclude reference="2Pi-Dn-0sZ"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Yww-Be-XDi"/>
@@ -108,9 +108,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="VnJ-nG-Sni"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="hEa-Oy-fPM" id="8BY-kW-G82"/>
-                        <outlet property="uiSearchBar" destination="2Pi-Dn-0sZ" id="QFE-nu-WjJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6V-s2-j97" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -123,7 +123,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2040" y="381"/>
+            <point key="canvasLocation" x="2991" y="381"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gaq-MY-k46">
@@ -147,6 +147,25 @@
                 </navigationController>
             </objects>
             <point key="canvasLocation" x="361.5" y="381"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eHV-8P-hD7">
+            <objects>
+                <navigationController storyboardIdentifier="searchBarTapped" automaticallyAdjustsScrollViewInsets="NO" id="Q3R-Uy-V3C" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LlS-CW-6hV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tm1-wN-wel" kind="relationship" relationship="rootViewController" id="FoZ-hw-V9K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EbD-7y-Kcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2073" y="381"/>
         </scene>
     </scenes>
 </document>
