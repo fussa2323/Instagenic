@@ -15,8 +15,46 @@
                     <view key="view" contentMode="scaleToFill" id="CH1-FR-1No">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vTh-dH-moL">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S60-mx-rwY">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EkE-yU-mdt">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                    </collectionViewCell>
+                                </cells>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="74" y="336" width="240" height="128"/>
+                                </variation>
+                            </collectionView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vTh-dH-moL"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="vTh-dH-moL"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="SgB-D1-lE1"/>
                 </viewController>
@@ -24,9 +62,39 @@
             </objects>
             <point key="canvasLocation" x="1279.5" y="381"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="CLz-Gc-2hu">
+            <objects>
+                <viewController id="tm1-wN-wel" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="foc-Hh-7gZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="64a-GV-VoB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hwp-SD-R6f">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="hEa-Oy-fPM" id="8BY-kW-G82"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6V-s2-j97" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="hEa-Oy-fPM">
+                    <connections>
+                        <outlet property="delegate" destination="tm1-wN-wel" id="NC1-WC-Jy7"/>
+                        <outlet property="searchContentsController" destination="tm1-wN-wel" id="tI9-i5-fUd"/>
+                        <outlet property="searchResultsDataSource" destination="tm1-wN-wel" id="sel-v8-aBf"/>
+                        <outlet property="searchResultsDelegate" destination="tm1-wN-wel" id="D36-cm-Rhg"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="2040" y="381"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="gaq-MY-k46">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7zh-Qg-HUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9du-Cv-zza" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="R1v-mU-ssd">
@@ -43,7 +111,6 @@
                         <segue destination="z0G-L6-Ecm" kind="relationship" relationship="rootViewController" id="jQo-bn-0tj"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7zh-Qg-HUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="361.5" y="381"/>
         </scene>
