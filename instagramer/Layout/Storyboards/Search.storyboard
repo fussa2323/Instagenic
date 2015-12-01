@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="1279.5" y="381"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Result View Controller-->
         <scene sceneID="CLz-Gc-2hu">
             <objects>
-                <viewController storyboardIdentifier="searchBarTapped" id="tm1-wN-wel" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="searchBarTapped" id="tm1-wN-wel" customClass="SearchResultViewController" customModule="instagramer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="foc-Hh-7gZ"/>
                         <viewControllerLayoutGuide type="bottom" id="64a-GV-VoB"/>
@@ -110,6 +110,7 @@
                     </view>
                     <connections>
                         <outlet property="searchDisplayController" destination="hEa-Oy-fPM" id="8BY-kW-G82"/>
+                        <outlet property="uiSearchBar" destination="2Pi-Dn-0sZ" id="QFE-nu-WjJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6V-s2-j97" userLabel="First Responder" sceneMemberID="firstResponder"/>
