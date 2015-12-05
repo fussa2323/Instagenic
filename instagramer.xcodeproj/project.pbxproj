@@ -13,6 +13,7 @@
 		474C6EAA1C12C90A00A54D32 /* SearchResultTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C6EA91C12C90A00A54D32 /* SearchResultTagsViewController.swift */; };
 		474C6EAC1C12C92900A54D32 /* SearchResultSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C6EAB1C12C92900A54D32 /* SearchResultSpotViewController.swift */; };
 		474C6EAE1C12CA6800A54D32 /* SearchResultMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C6EAD1C12CA6700A54D32 /* SearchResultMainViewController.swift */; };
+		474C6EB01C12EE3A00A54D32 /* FeedListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C6EAF1C12EE3A00A54D32 /* FeedListItemTableViewCell.swift */; };
 		4756FD3C1BF83E9D00B5DAEC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756FD3B1BF83E9D00B5DAEC /* Photo.swift */; };
 		4756FD3F1BF86C4600B5DAEC /* FastImageCacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756FD3E1BF86C4600B5DAEC /* FastImageCacheHelper.swift */; };
 		478AE85B1BE8F97100452247 /* MyPageGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */; };
@@ -78,6 +79,7 @@
 		474C6EA91C12C90A00A54D32 /* SearchResultTagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTagsViewController.swift; sourceTree = "<group>"; };
 		474C6EAB1C12C92900A54D32 /* SearchResultSpotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultSpotViewController.swift; sourceTree = "<group>"; };
 		474C6EAD1C12CA6700A54D32 /* SearchResultMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultMainViewController.swift; sourceTree = "<group>"; };
+		474C6EAF1C12EE3A00A54D32 /* FeedListItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedListItemTableViewCell.swift; sourceTree = "<group>"; };
 		4756FD3B1BF83E9D00B5DAEC /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		4756FD3D1BF8514200B5DAEC /* Instagramer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Instagramer-Bridging-Header.h"; sourceTree = "<group>"; };
 		4756FD3E1BF86C4600B5DAEC /* FastImageCacheHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastImageCacheHelper.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 			children = (
 				474C6EA31C12B32800A54D32 /* FeedListItemViewController.swift */,
 				47DC4D511BE4B1BC0043C7F5 /* FormSettingViewController.swift */,
+				474C6EAF1C12EE3A00A54D32 /* FeedListItemTableViewCell.swift */,
 			);
 			path = sub1;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				47B4A05A1C01FF2C0059FEC9 /* Album.swift in Sources */,
 				4756FD3F1BF86C4600B5DAEC /* FastImageCacheHelper.swift in Sources */,
 				474C6EA81C12C8ED00A54D32 /* SearchResultPeopleViewController.swift in Sources */,
+				474C6EB01C12EE3A00A54D32 /* FeedListItemTableViewCell.swift in Sources */,
 				47DC4D3F1BE34AB30043C7F5 /* FeedViewController.swift in Sources */,
 				474C6EA01C0DE4C800A54D32 /* SearchResultViewController.swift in Sources */,
 				47B4A05E1C029A070059FEC9 /* CurrentAccount.swift in Sources */,
