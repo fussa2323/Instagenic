@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import PagingMenuController
 
-class SearchResultViewController: UIViewController, UISearchBarDelegate {
+class SearchResultViewController: UIViewController, UISearchBarDelegate, PagingMenuControllerDelegate {
 
     let uiSearchBar : UISearchBar = UISearchBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // UISearchBar Config---------------
         
+        // UISearchBar Config---------------
         uiSearchBar.delegate = self
         uiSearchBar.text = "" // 表示するテキストを設定(入力済みにする)
         uiSearchBar.prompt = "" // サーチバーのタイトルを設定する。
@@ -29,8 +30,31 @@ class SearchResultViewController: UIViewController, UISearchBarDelegate {
         
         self.navigationItem.titleView = uiSearchBar
         self.navigationItem.titleView!.frame = CGRectMake(0, 0, 320, 44);
-        
         // UISearchBar Config----------------
+       
+        // PagingMenuController Setup
+        let SearchResultMainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("main") as! SearchResultMainViewController
+        SearchResultMainViewController.title = "上位検索結果"
+        let SearchResultPeopleViewController = self.storyboard?.instantiateViewControllerWithIdentifier("people") as! SearchResultPeopleViewController
+        SearchResultPeopleViewController.title = "ピープル"
+        let SearchResultTagsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tags") as! SearchResultTagsViewController
+        SearchResultTagsViewController.title = "タグ"
+        let SearchResultSpotViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tags") as! SearchResultSpotViewController
+        SearchResultSpotViewController.title = "スポット"
+        let viewControllers = [SearchResultMainViewController, SearchResultPeopleViewController, SearchResultTagsViewController, SearchResultSpotViewController]
+        
+        let options = PagingMenuOptions()
+        options.menuHeight = 35
+        options.menuDisplayMode = .Standard(widthMode: .Flexible, centerItem: false, scrollingMode: .PagingEnabled)
+        //        options.menuDisplayMode = .SegmentedControl
+        //        options.menuDisplayMode = .Infinite(widthMode: .Flexible)
+        options.textColor = UIColor.textColor()
+        options.selectedTextColor = UIColor.mainColor()
+        options.menuItemMode = .Underline(height: 3, color: UIColor.mainColor(), horizontalPadding: 0, verticalPadding: 0)
+        
+        let pagingMenuController = self.childViewControllers.first as! PagingMenuController
+        pagingMenuController.delegate = self
+        pagingMenuController.setup(viewControllers: viewControllers, options: options)
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PagingMenuController
 
 class SearchViewController: UIViewController, UISearchBarDelegate {
 
@@ -16,9 +17,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         self.title = "Search"
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
-        
         // UISearchBar Config---------------
-
         let uiSearchBar : UISearchBar = UISearchBar()
         uiSearchBar.frame = CGRectMake(0,0,300,80)
         uiSearchBar.delegate = self
@@ -34,9 +33,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         
         self.navigationItem.titleView = uiSearchBar
         self.navigationItem.titleView!.frame = CGRectMake(0, 0, 320, 44);
-
         // UISearchBar Config----------------
-        
     }
 
     override func didReceiveMemoryWarning() {
