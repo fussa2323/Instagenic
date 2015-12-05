@@ -10,15 +10,21 @@ import UIKit
 
 class FeedListItemTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var createdTime: UILabel!
+    @IBOutlet weak var mainImage: UIImageView!
+    @IBOutlet weak var likes: UILabel!
+    @IBOutlet weak var comments: UILabel!
+    @IBOutlet weak var caption: UITextView!
+    @IBOutlet weak var location: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

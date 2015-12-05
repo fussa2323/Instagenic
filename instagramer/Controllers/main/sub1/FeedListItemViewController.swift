@@ -11,7 +11,7 @@ import Alamofire
 import FastImageCache
 import SwiftyJSON
 
-class FeedListItemViewController: UIViewController {
+class FeedListItemViewController: UIViewController, UITableViewDelegate{
 
     @IBOutlet weak var tableView: UITableView!
     var photos = [Photo]()
@@ -25,10 +25,17 @@ class FeedListItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.delegate = self
+//        self.tableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    //----------------------------
+    // MARK: UITableViewDelegate
+    //----------------------------
+    
     
 }
