@@ -63,7 +63,7 @@ struct UserInfo {
 //        guard let resetDateString = dictionary["rate"]?["reset"] as? NSTimeInterval else {
 //            return nil
 //        }
-        
+//        
 //        self.instagramId = instagramId
 //        self.resetDate = NSDate(timeIntervalSince1970: resetDateString)
     }

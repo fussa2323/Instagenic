@@ -7,6 +7,7 @@ PODS:
   - Himotoki (1.3.0)
   - MotionBlur (0.2.0)
   - ObjectMapper (0.19)
+  - PagingMenuController (0.7.6)
   - Realm (0.96.0):
     - Realm/Headers (= 0.96.0)
   - Realm/Headers (0.96.0)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - Himotoki (~> 1.3)
   - MotionBlur
   - ObjectMapper (~> 0.19)
+  - PagingMenuController
   - RealmSwift
   - SDWebImage
   - SwiftTask
@@ -40,6 +42,7 @@ SPEC CHECKSUMS:
   Himotoki: 4b505fe55f2380f5c9086ce3e02a1e0dea551a9a
   MotionBlur: 5dc5583a725f087bdf952278b1c41b7bb7ba5f79
   ObjectMapper: a88114e5df20f055da63029f25cbc01014847c91
+  PagingMenuController: d34cb992957c7dfae085785a870cf5f3966020be
   Realm: d1b1eff5264cd6a3158b7a9b6c499d7f6ad3a860
   RealmSwift: 40246e6f57a4e863bfdfc1ca1d7b967f0df607e2
   Result: feaaff535eb59c414c6c7f95e6145ab991b1b07f

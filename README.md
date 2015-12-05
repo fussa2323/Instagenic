@@ -41,3 +41,18 @@ $ open "instagramer.xcworkspace"
 
 - Xcode 7.0
 - iOS 8
+
+## API Endpoint V1
+- (* ) InstagenicUser.uuidをヘッダーのAuthorizationで渡す
+
+# InstagramAPI Endpoints
+### /instagenic_users
+|Method|enum case|内容|
+|---|---|---|
+|GET|GetPopularPhoto|ポピュラーメディアを取得|
+|GET|GetUserInfo|Userの基本情報を取得|
+|GET|GetUserFeed|UserのFeedを取得|
+|GET|GetUserBySearch|ユーザを名前で検索する|
+|GET|requestOauthCode|OAuthによるユーザ認証|
+
+
