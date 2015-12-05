@@ -18,18 +18,21 @@ class FeedViewController: UIViewController, PagingMenuControllerDelegate{
         
         //PagingMenuController Setup
         let feedListItemViewController1 = self.storyboard?.instantiateViewControllerWithIdentifier("FeedListItem") as! FeedListItemViewController
-        feedListItemViewController1.title = "list1"
+        feedListItemViewController1.title = "FeedList1"
         let feedListItemViewController2 = self.storyboard?.instantiateViewControllerWithIdentifier("FeedListItem") as! FeedListItemViewController
-        feedListItemViewController2.title = "list2"
+        feedListItemViewController2.title = "FeedList2"
         let feedListItemViewController3 = self.storyboard?.instantiateViewControllerWithIdentifier("FeedListItem") as! FeedListItemViewController
-        feedListItemViewController3.title = "list3"
+        feedListItemViewController3.title = "FeedList3"
         let viewControllers = [feedListItemViewController1, feedListItemViewController2, feedListItemViewController3]
         
         let options = PagingMenuOptions()
-        options.menuHeight = 28
+        options.menuHeight = 35
         options.menuDisplayMode = .Standard(widthMode: .Flexible, centerItem: false, scrollingMode: .PagingEnabled)
+//        options.menuDisplayMode = .SegmentedControl
+//        options.menuDisplayMode = .Infinite(widthMode: .Flexible)
         options.textColor = UIColor.textColor()
         options.selectedTextColor = UIColor.mainColor()
+        options.menuItemMode = .Underline(height: 3, color: UIColor.mainColor(), horizontalPadding: 0, verticalPadding: 0)
         
         let pagingMenuController = self.childViewControllers.first as! PagingMenuController
         pagingMenuController.delegate = self

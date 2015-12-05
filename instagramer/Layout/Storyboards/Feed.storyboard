@@ -215,9 +215,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Al3-BZ-h44" firstAttribute="top" secondItem="OLQ-MO-gJA" secondAttribute="bottom" id="4Ng-Bi-I9s"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OLQ-MO-gJA" secondAttribute="trailing" id="AhA-Jx-RgP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OLQ-MO-gJA" secondAttribute="trailing" id="AhA-Jx-RgP">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
                             <constraint firstItem="OLQ-MO-gJA" firstAttribute="top" secondItem="Zf9-xb-1YT" secondAttribute="topMargin" id="Iky-0Q-7p8"/>
-                            <constraint firstItem="OLQ-MO-gJA" firstAttribute="leading" secondItem="Zf9-xb-1YT" secondAttribute="leadingMargin" id="fke-iT-q7G"/>
+                            <constraint firstItem="OLQ-MO-gJA" firstAttribute="leading" secondItem="Zf9-xb-1YT" secondAttribute="leadingMargin" id="fke-iT-q7G">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
                             <constraint firstItem="OLQ-MO-gJA" firstAttribute="top" secondItem="ksG-D8-y8k" secondAttribute="bottom" id="kPm-60-UJA"/>
                         </constraints>
                         <variation key="default">
