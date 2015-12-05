@@ -33,20 +33,20 @@ class SearchResultViewController: UIViewController, UISearchBarDelegate, PagingM
         // UISearchBar Config----------------
        
         // PagingMenuController Setup
-        let SearchResultMainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("main") as! SearchResultMainViewController
-        SearchResultMainViewController.title = "上位検索結果"
-        let SearchResultPeopleViewController = self.storyboard?.instantiateViewControllerWithIdentifier("people") as! SearchResultPeopleViewController
-        SearchResultPeopleViewController.title = "ピープル"
-        let SearchResultTagsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tags") as! SearchResultTagsViewController
-        SearchResultTagsViewController.title = "タグ"
-        let SearchResultSpotViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tags") as! SearchResultSpotViewController
-        SearchResultSpotViewController.title = "スポット"
-        let viewControllers = [SearchResultMainViewController, SearchResultPeopleViewController, SearchResultTagsViewController, SearchResultSpotViewController]
+        let SearchResultMainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("main")
+        SearchResultMainViewController!.title = "上位検索結果"
+        let SearchResultPeopleViewController = self.storyboard?.instantiateViewControllerWithIdentifier("people")
+        SearchResultPeopleViewController!.title = "ピープル"
+        let SearchResultTagsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tags")
+        SearchResultTagsViewController!.title = "タグ"
+        let SearchResultSpotViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tags")
+        SearchResultSpotViewController!.title = "スポット"
+        let viewControllers = [SearchResultMainViewController!, SearchResultPeopleViewController!, SearchResultTagsViewController!, SearchResultSpotViewController!]
         
         let options = PagingMenuOptions()
         options.menuHeight = 35
-        options.menuDisplayMode = .Standard(widthMode: .Flexible, centerItem: false, scrollingMode: .PagingEnabled)
-        //        options.menuDisplayMode = .SegmentedControl
+//        options.menuDisplayMode = .Standard(widthMode: .Flexible, centerItem: false, scrollingMode: .PagingEnabled)
+                options.menuDisplayMode = .SegmentedControl
         //        options.menuDisplayMode = .Infinite(widthMode: .Flexible)
         options.textColor = UIColor.textColor()
         options.selectedTextColor = UIColor.mainColor()
