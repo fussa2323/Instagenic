@@ -16,7 +16,11 @@ struct Instagram {
         static let redirectURI = "http://www.example.com/"
         static let clientSecret = "e7099308c8fa43c29a2afd66e2266c7a"
         
-        case PopularPhotos(String, String)
+        case PopularPhotos(String, String) //ユーザが公開しているうちもっとも新しいメディアを取得する
+        case GetPopularPhoto(String) //ポピュラー写真を取得
+        case GetUserInfo(String, String) //Userの基本情報を取得
+        case GetUserFeed(String, String, String, String) //UserのFeedを取得
+        case GetUserBySearch(String, String) //ユーザを名前で検索する
         case requestOauthCode
         
         var URLRequest: NSMutableURLRequest {
@@ -25,6 +29,26 @@ struct Instagram {
                 case .PopularPhotos (let userID, let accessToken):
                     let params = ["access_token": accessToken]
                     let pathString = "/v1/users/" + userID + "/media/recent"
+                    return (pathString, params)
+                    
+                case .GetPopularPhoto(let accessToken):
+                    let params = ["access_token": accessToken]
+                    let pathString = "/vi/media/popular/?client_id=" + Router.clientID
+                    return (pathString, params)
+                
+                case .GetUserInfo(let userID, let accessToken):
+                    let params = ["access_token": accessToken]
+                    let pathString = "/vi/users/" + userID + "/media/recent"
+                    return (pathString, params)
+                
+                case .GetUserFeed(let userID, let accessToken, let maxID, let minID):
+                    let params = ["access_token": accessToken, "max_id": maxID, "min_id": minID]
+                    let pathString = "/vi/users/" + userID + "/feed"
+                    return (pathString, params)
+                    
+                case .GetUserBySearch(let q, let accessToken):
+                    let params = ["q": q, "access_token": accessToken]
+                    let pathString = "/vi/users/search"
                     return (pathString, params)
                     
                 case .requestOauthCode:
