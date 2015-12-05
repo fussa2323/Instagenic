@@ -52,7 +52,7 @@ $ open "instagramer.xcworkspace"
 |GET|GetPopularPhoto|ポピュラーメディアを取得|
 |GET|GetUserInfo|Userの基本情報を取得|
 |GET|GetUserFeed|UserのFeedを取得|
-|GET|GetUserBySearch|ユーザを名前で検索する|
-|GET|requestOauthCode|OAuthによるユーザ認証|
+|GET|GetUserBySearch|Userを名前で検索する|
+|GET|requestOauthCode|OAuthによるUser認証|
 
 
