@@ -14,7 +14,7 @@ extension UIColor {
     }
     
     class func textColor() -> UIColor {
-        return UIColor.rgbColor(0xFFFFFF)
+        return UIColor.rgbColor(0x5B5C5F)
     }
     
     class func rgbColor(rgbValue: UInt, alpha: Float = 1.0) -> UIColor {

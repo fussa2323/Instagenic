@@ -26,8 +26,10 @@ class FeedViewController: UIViewController, PagingMenuControllerDelegate{
         let viewControllers = [feedListItemViewController1, feedListItemViewController2, feedListItemViewController3]
         
         let options = PagingMenuOptions()
-        options.menuHeight = 40
-        options.menuDisplayMode = .Standard(widthMode: .Flexible, centerItem: true, scrollingMode: .PagingEnabled)
+        options.menuHeight = 28
+        options.menuDisplayMode = .Standard(widthMode: .Flexible, centerItem: false, scrollingMode: .PagingEnabled)
+        options.textColor = UIColor.textColor()
+        options.selectedTextColor = UIColor.mainColor()
         
         let pagingMenuController = self.childViewControllers.first as! PagingMenuController
         pagingMenuController.delegate = self

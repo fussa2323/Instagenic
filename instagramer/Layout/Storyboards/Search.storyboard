@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9du-Cv-zza">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -72,6 +73,7 @@
                         <viewControllerLayoutGuide type="bottom" id="64a-GV-VoB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hwp-SD-R6f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2Pi-Dn-0sZ">
@@ -128,7 +130,6 @@
         <!--Navigation Controller-->
         <scene sceneID="gaq-MY-k46">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7zh-Qg-HUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9du-Cv-zza" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="R1v-mU-ssd">
@@ -145,6 +146,7 @@
                         <segue destination="z0G-L6-Ecm" kind="relationship" relationship="rootViewController" id="jQo-bn-0tj"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7zh-Qg-HUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="361.5" y="381"/>
         </scene>
