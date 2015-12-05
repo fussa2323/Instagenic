@@ -60,6 +60,7 @@ class MyPageViewController: UIViewController {
             break
         }
     }
+    
     @IBAction func firstView(sender: AnyObject) {
         firstView.hidden = false
         secondView.hidden = true

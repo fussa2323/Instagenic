@@ -10,6 +10,7 @@
 		474C6EA01C0DE4C800A54D32 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C6E9F1C0DE4C800A54D32 /* SearchResultViewController.swift */; };
 		474C6EA21C12AC0100A54D32 /* InstagramRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C6EA11C12AC0100A54D32 /* InstagramRequest.swift */; };
 		474C6EA41C12B32800A54D32 /* FeedListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C6EA31C12B32800A54D32 /* FeedListItemViewController.swift */; };
+		474C6EA61C12C77F00A54D32 /* SearchResultItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C6EA51C12C77F00A54D32 /* SearchResultItemViewController.swift */; };
 		4756FD3C1BF83E9D00B5DAEC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756FD3B1BF83E9D00B5DAEC /* Photo.swift */; };
 		4756FD3F1BF86C4600B5DAEC /* FastImageCacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756FD3E1BF86C4600B5DAEC /* FastImageCacheHelper.swift */; };
 		478AE85B1BE8F97100452247 /* MyPageGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */; };
@@ -72,6 +73,7 @@
 		474C6E9F1C0DE4C800A54D32 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		474C6EA11C12AC0100A54D32 /* InstagramRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramRequest.swift; sourceTree = "<group>"; };
 		474C6EA31C12B32800A54D32 /* FeedListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedListItemViewController.swift; sourceTree = "<group>"; };
+		474C6EA51C12C77F00A54D32 /* SearchResultItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultItemViewController.swift; sourceTree = "<group>"; };
 		4756FD3B1BF83E9D00B5DAEC /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		4756FD3D1BF8514200B5DAEC /* Instagramer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Instagramer-Bridging-Header.h"; sourceTree = "<group>"; };
 		4756FD3E1BF86C4600B5DAEC /* FastImageCacheHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastImageCacheHelper.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				474C6E9F1C0DE4C800A54D32 /* SearchResultViewController.swift */,
+				474C6EA51C12C77F00A54D32 /* SearchResultItemViewController.swift */,
 			);
 			name = sub2;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				478AE85B1BE8F97100452247 /* MyPageGridViewController.swift in Sources */,
 				47AC50C71BD22F9E00A6C707 /* TabBarController.swift in Sources */,
 				47DC4D421BE34DDF0043C7F5 /* SearchViewController.swift in Sources */,
+				474C6EA61C12C77F00A54D32 /* SearchResultItemViewController.swift in Sources */,
 				47DC4D441BE34E4E0043C7F5 /* AlbumCollectionViewController.swift in Sources */,
 				47AC50BB1BD0D5DF00A6C707 /* Instagram.swift in Sources */,
 				47B4A0541C01FA480059FEC9 /* Accounts.swift in Sources */,

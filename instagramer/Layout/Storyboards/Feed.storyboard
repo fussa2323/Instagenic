@@ -30,8 +30,12 @@
                         <constraints>
                             <constraint firstItem="09G-qA-Adp" firstAttribute="top" secondItem="yjW-Kn-L58" secondAttribute="bottom" id="0Kb-tf-vLa"/>
                             <constraint firstItem="knK-tf-4JZ" firstAttribute="top" secondItem="09G-qA-Adp" secondAttribute="bottom" id="Wf0-4U-fOo"/>
-                            <constraint firstItem="09G-qA-Adp" firstAttribute="leading" secondItem="pqh-ic-aO5" secondAttribute="leadingMargin" id="gHK-zg-mFF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="09G-qA-Adp" secondAttribute="trailing" id="x9E-U1-Ec7"/>
+                            <constraint firstItem="09G-qA-Adp" firstAttribute="leading" secondItem="pqh-ic-aO5" secondAttribute="leadingMargin" id="gHK-zg-mFF">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="09G-qA-Adp" secondAttribute="trailing" id="x9E-U1-Ec7">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">

@@ -44,7 +44,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     //---------------------------
-    // MARK: UISearchBar
+    // MARK: UISearchBarDelegate
     //---------------------------
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
