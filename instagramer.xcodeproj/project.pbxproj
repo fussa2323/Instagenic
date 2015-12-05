@@ -157,13 +157,13 @@
 		474C6E9E1C0DE4AE00A54D32 /* sub2 */ = {
 			isa = PBXGroup;
 			children = (
-				474C6E9F1C0DE4C800A54D32 /* SearchResultViewController.swift */,
-				474C6EA71C12C8ED00A54D32 /* SearchResultPeopleViewController.swift */,
-				474C6EA91C12C90A00A54D32 /* SearchResultTagsViewController.swift */,
-				474C6EAB1C12C92900A54D32 /* SearchResultSpotViewController.swift */,
 				474C6EAD1C12CA6700A54D32 /* SearchResultMainViewController.swift */,
+				474C6EA71C12C8ED00A54D32 /* SearchResultPeopleViewController.swift */,
+				474C6EAB1C12C92900A54D32 /* SearchResultSpotViewController.swift */,
+				474C6EA91C12C90A00A54D32 /* SearchResultTagsViewController.swift */,
+				474C6E9F1C0DE4C800A54D32 /* SearchResultViewController.swift */,
 			);
-			name = sub2;
+			path = sub2;
 			sourceTree = "<group>";
 		};
 		478AE8591BE8F88500452247 /* sub4 */ = {
@@ -173,8 +173,7 @@
 				478AE85A1BE8F97100452247 /* MyPageGridViewController.swift */,
 				478AE85C1BE8F99700452247 /* MyPageListViewController.swift */,
 			);
-			name = sub4;
-			path = sub5;
+			path = sub4;
 			sourceTree = "<group>";
 		};
 		47AC50741BD0C1BE00A6C707 = {
@@ -321,12 +320,12 @@
 				47DC4D501BE4ABE60043C7F5 /* sub1 */,
 				474C6E9E1C0DE4AE00A54D32 /* sub2 */,
 				478AE8591BE8F88500452247 /* sub4 */,
+				47DC4D431BE34E4E0043C7F5 /* AlbumCollectionViewController.swift */,
 				47DC4D3D1BE34AB30043C7F5 /* FeedViewController.swift */,
 				47AC50C41BD22F3D00A6C707 /* FirstLaunchViewController.swift */,
 				47DC4D491BE35E2C0043C7F5 /* HashTagTableViewController.swift */,
 				47AC50BE1BD0E96000A6C707 /* LoginViewController.swift */,
 				47DC4D451BE34E8A0043C7F5 /* MyPageViewController.swift */,
-				47DC4D431BE34E4E0043C7F5 /* AlbumCollectionViewController.swift */,
 				47DC4D411BE34DDF0043C7F5 /* SearchViewController.swift */,
 				47AC50C61BD22F9E00A6C707 /* TabBarController.swift */,
 			);
@@ -336,8 +335,8 @@
 		47DC4D501BE4ABE60043C7F5 /* sub1 */ = {
 			isa = PBXGroup;
 			children = (
-				47DC4D511BE4B1BC0043C7F5 /* FormSettingViewController.swift */,
 				474C6EA31C12B32800A54D32 /* FeedListItemViewController.swift */,
+				47DC4D511BE4B1BC0043C7F5 /* FormSettingViewController.swift */,
 			);
 			path = sub1;
 			sourceTree = "<group>";
