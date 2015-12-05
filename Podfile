@@ -21,6 +21,7 @@ target 'instagramer' do
   pod 'Eureka', '~> 1.0'
   pod 'APIKit', '1.0.0'
   pod 'Himotoki', '~> 1.3'
+  pod 'PagingMenuController'
 end
 
 target 'instagramerTests' do

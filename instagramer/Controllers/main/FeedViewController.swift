@@ -7,21 +7,32 @@
 //
 
 import UIKit
+import PagingMenuController
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController, PagingMenuControllerDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Feed"
-        
-//        let leftBarButton = UIBarButtonItem(title: "premium", style: .Plain, target: self, action: "tappedLeftBarButton")
-//        let rightBarButton = UIBarButtonItem(title: "Setting", style: .Plain, target: self, action: "tappedRightBarButton")
-//        
-//        self.navigationItem.leftBarButtonItem = leftBarButton
-//        self.navigationItem.rightBarButtonItem = rightBarButton
-        
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-//        self.navigationController?.navigationBar.barTintColor = UIColor.mainColor()
+        
+        //PagingMenuController Setup
+        let feedListItemViewController1 = self.storyboard?.instantiateViewControllerWithIdentifier("FeedListItem") as! FeedListItemViewController
+        feedListItemViewController1.title = "list1"
+        let feedListItemViewController2 = self.storyboard?.instantiateViewControllerWithIdentifier("FeedListItem") as! FeedListItemViewController
+        feedListItemViewController2.title = "list2"
+        let feedListItemViewController3 = self.storyboard?.instantiateViewControllerWithIdentifier("FeedListItem") as! FeedListItemViewController
+        feedListItemViewController3.title = "list3"
+        let viewControllers = [feedListItemViewController1, feedListItemViewController2, feedListItemViewController3]
+        
+        let options = PagingMenuOptions()
+        options.menuHeight = 40
+        options.menuDisplayMode = .Standard(widthMode: .Flexible, centerItem: true, scrollingMode: .PagingEnabled)
+        
+        let pagingMenuController = self.childViewControllers.first as! PagingMenuController
+        pagingMenuController.delegate = self
+        pagingMenuController.setup(viewControllers: viewControllers, options: options)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,8 +40,16 @@ class FeedViewController: UIViewController {
     }
     
     func tappedRightBarButton() {
-//        let nextPage = FormSettingViewController(coder: NSCoder())
-//        self.navigationController?.pushViewController(nextPage!, animated: true)
+    }
+    
+    //---------------------------------------
+    // MARK: - PagingMenuControllerDelegate
+    //---------------------------------------
+    
+    func willMoveToMenuPage(page: Int) {
+    }
+    
+    func didMoveToMenuPage(page: Int) {
     }
 
 }
