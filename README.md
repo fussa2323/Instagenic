@@ -45,8 +45,8 @@ $ open "instagramer.xcworkspace"
 ## API Endpoint V1
 - (* ) InstagenicUser.uuidをヘッダーのAuthorizationで渡す
 
-# InstagramAPI Endpoints
-### /instagenic_users
+# InstagramAPI Router
+### User
 |Method|enum case|内容|
 |---|---|---|
 |GET|GetPopularPhoto|ポピュラーメディアを取得|
