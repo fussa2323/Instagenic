@@ -27,7 +27,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         uiSearchBar.placeholder = "検索" // プレスフォルダーを設定する。
         uiSearchBar.showsCancelButton = false // キャンセルボタン表示を設定(クリアボタン)
         uiSearchBar.showsSearchResultsButton = false // 検索結果表示ボタン表示を設定
-        uiSearchBar.keyboardType = UIKeyboardType.Default // テキスト入力時のキーボードのスタイルを設定
+        uiSearchBar.keyboardType = UIKeyboardType.URL // テキスト入力時のキーボードのスタイルを設定
         uiSearchBar.searchBarStyle = UISearchBarStyle.Minimal // バースタイルをDefaultに設定する.
         uiSearchBar.barStyle = UIBarStyle.Default // 検索バーのスタイルを設定
         uiSearchBar.tintColor = UIColor.mainColor() // 検索バー全体の色を設定

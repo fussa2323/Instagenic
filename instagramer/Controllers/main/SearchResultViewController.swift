@@ -10,16 +10,17 @@ import UIKit
 
 class SearchResultViewController: UIViewController, UISearchBarDelegate {
 
+    let uiSearchBar : UISearchBar = UISearchBar()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // UISearchBar Config---------------
         
-        let uiSearchBar : UISearchBar = UISearchBar()
         uiSearchBar.delegate = self
         uiSearchBar.text = "" // 表示するテキストを設定(入力済みにする)
         uiSearchBar.prompt = "" // サーチバーのタイトルを設定する。
         uiSearchBar.placeholder = "検索" // プレスフォルダーを設定する。
-        uiSearchBar.showsCancelButton = true // キャンセルボタン表示を設定(クリアボタン)
+        uiSearchBar.showsCancelButton = false // キャンセルボタン表示を設定(クリアボタン)
         uiSearchBar.showsSearchResultsButton = false // 検索結果表示ボタン表示を設定
         uiSearchBar.keyboardType = UIKeyboardType.Default // テキスト入力時のキーボードのスタイルを設定
         uiSearchBar.searchBarStyle = UISearchBarStyle.Minimal // バースタイルをDefaultに設定する.
@@ -53,6 +54,7 @@ class SearchResultViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+        self.uiSearchBar.setShowsCancelButton(true, animated: true)
         return true
     }
 }
