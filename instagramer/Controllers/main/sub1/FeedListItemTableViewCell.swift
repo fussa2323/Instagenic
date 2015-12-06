@@ -18,6 +18,7 @@ class FeedListItemTableViewCell: UITableViewCell {
     @IBOutlet weak var comments: UILabel!
     @IBOutlet weak var caption: UITextView!
     @IBOutlet weak var location: UILabel!
+    var photo: Photo?
     
     override func awakeFromNib() {
         super.awakeFromNib()

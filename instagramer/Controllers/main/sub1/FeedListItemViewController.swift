@@ -49,6 +49,18 @@ class FeedListItemViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("FeedListItemCell", forIndexPath: indexPath) as! FeedListItemTableViewCell
+        let sharedImageCache = FICImageCache.sharedImageCache()
+        cell.mainImage.image = nil
+        
+        let photo = photos[indexPath.row] as Photo
+        if (cell.photo != photo) {
+            
+            sharedImageCache.cancelImageRetrievalForEntity(cell.photoInfo, withFormatName: formatName)
+            
+            cell.photoInfo = photo
+        }
+        
+        
         
         
         return cell
