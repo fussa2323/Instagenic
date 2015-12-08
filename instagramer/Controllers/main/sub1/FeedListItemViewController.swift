@@ -14,25 +14,36 @@ import SwiftyJSON
 class FeedListItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var tableView: UITableView!
-    let accessToken = CurrentAccount.sharedController.account?.accessToken
-    let username = CurrentAccount.sharedController.account?.userName
+    let accessToken: String? = CurrentAccount.sharedController.account?.accessToken
+    let instagramId: String?  = CurrentAccount.sharedController.account?.instagramId
     var photos = [Photo]()
     let refreshControl = UIRefreshControl()
     var populatingPhotos = false
     var nextURLRequest: NSURLRequest?
+    let formatName = FSBigImageFormatName
     
     //--------------------
     // MARK: Life-cycle
     //--------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        self.setupTableView()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadFeedData()
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func setupTableView() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+//        self.loadFeedData()
     }
     
     //----------------------------
@@ -51,17 +62,23 @@ class FeedListItemViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCellWithIdentifier("FeedListItemCell", forIndexPath: indexPath) as! FeedListItemTableViewCell
         let sharedImageCache = FICImageCache.sharedImageCache()
         cell.mainImage.image = nil
-        
         let photo = photos[indexPath.row] as Photo
+        
         if (cell.photo != photo) {
-            
-            sharedImageCache.cancelImageRetrievalForEntity(cell.photoInfo, withFormatName: formatName)
-            
-            cell.photoInfo = photo
+            sharedImageCache.cancelImageRetrievalForEntity(cell.photo, withFormatName: formatName)
+            cell.photo = photo
+            print(photo)
         }
         
-        
-        
+//        sharedImageCache.retrieveImageForEntity(photo, withFormatName: formatName, completionBlock: {
+//            (photo, _, image) -> Void in
+//            if (photo as! Photo) == cell.photo {
+//                cell.profilePicture.image = image
+//            }
+//        })
+//        
+//        cell.mainImage.image = UIImage(named: "Imaeg-2")
+//        cell.profilePicture.image = UIImage(named: "Image-2")
         
         return cell
     }
@@ -77,7 +94,11 @@ class FeedListItemViewController: UIViewController, UITableViewDelegate, UITable
         
         populatingPhotos = true
         
-        Alamofire.request(Instagram.Router.GetUserFeed(self.username!, self.accessToken!, "", ""))
+        guard let instagramId = self.instagramId, accessToken = self.accessToken else{
+            return
+        }
+        
+        Alamofire.request(Instagram.Router.PopularPhotos(instagramId, accessToken))
             .responseJSON { (request, response, result) -> Void in
                 defer {
                     self.populatingPhotos = false
@@ -108,6 +129,7 @@ class FeedListItemViewController: UIViewController, UITableViewDelegate, UITable
                                 
                                 dispatch_async(dispatch_get_main_queue()) {
                                     self.tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
+                                    self.tableView.reloadData()
                                 }
                                 
                             }
