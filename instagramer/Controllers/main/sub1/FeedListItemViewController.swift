@@ -20,6 +20,7 @@ class FeedListItemViewController: UIViewController, UITableViewDelegate, UITable
     var photos = [Photo]()
     let refreshControl = UIRefreshControl()
     var populatingPhotos = false
+    var updatesURLRequest: URLRequestConvertible?
     var nextURLRequest: NSURLRequest?
     let formatName = FSBigImageFormatName
     
@@ -33,7 +34,11 @@ class FeedListItemViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.loadFeedData()
+        guard let instagramId = self.instagramId, accessToken = self.accessToken else {
+            return
+        }
+        self.updatesURLRequest = Instagram.Router.PopularPhotos(instagramId, accessToken)
+        self.loadFeedData(updatesURLRequest!)
         self.tableView.reloadData()
     }
 
@@ -44,7 +49,24 @@ class FeedListItemViewController: UIViewController, UITableViewDelegate, UITable
     func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
-//        self.loadFeedData()
+        
+        refreshControl.tintColor = UIColor.mainColor()
+        refreshControl.addTarget(self, action: "handleRefresh", forControlEvents: .ValueChanged)
+        self.tableView.addSubview(refreshControl)
+    }
+    
+    func handleRefresh() {
+        nextURLRequest = nil
+        refreshControl.beginRefreshing()
+        self.photos.removeAll(keepCapacity: false)
+        self.tableView!.reloadData()
+        refreshControl.endRefreshing()
+        
+        guard let instagramId = self.instagramId, accessToken = self.accessToken else {
+            return
+        }
+        self.updatesURLRequest = Instagram.Router.PopularPhotos(instagramId, accessToken)
+        self.loadFeedData(updatesURLRequest!)
     }
     
     //----------------------------
@@ -78,19 +100,22 @@ class FeedListItemViewController: UIViewController, UITableViewDelegate, UITable
                 cell.mainImage.sd_setImageWithURL(imageURL)
             }
         })
-
-//        cell.mainImage.image = UIImage(named: "Imaeg-2")
-//        cell.profilePicture.sd_setImageWithURL(photo.sourceImageURL)
-        
         
         return cell
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        if (self.nextURLRequest != nil && scrollView.contentOffset.y + view.frame.size.height > scrollView.contentSize.height * 0.8) {
+            self.loadFeedData(self.nextURLRequest!)
+        }
     }
     
     //----------------------------
     // MARK: Request methods
     //----------------------------
     
-    func loadFeedData() {
+    func loadFeedData(request: URLRequestConvertible) {
         if populatingPhotos {
             return
         }
@@ -101,7 +126,7 @@ class FeedListItemViewController: UIViewController, UITableViewDelegate, UITable
             return
         }
         
-        Alamofire.request(Instagram.Router.PopularPhotos(instagramId, accessToken))
+        Alamofire.request(request)
             .responseJSON { (request, response, result) -> Void in
                 defer {
                     self.populatingPhotos = false
