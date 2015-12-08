@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import FastImageCache
 import SwiftyJSON
+import SDWebImage
 
 class FeedListItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
@@ -61,8 +62,8 @@ class FeedListItemViewController: UIViewController, UITableViewDelegate, UITable
         
         let cell = tableView.dequeueReusableCellWithIdentifier("FeedListItemCell", forIndexPath: indexPath) as! FeedListItemTableViewCell
         let sharedImageCache = FICImageCache.sharedImageCache()
-        cell.mainImage.image = nil
         let photo = photos[indexPath.row] as Photo
+        let imageURL = photo.sourceImageURL
         
         if (cell.photo != photo) {
             sharedImageCache.cancelImageRetrievalForEntity(cell.photo, withFormatName: formatName)
@@ -70,15 +71,17 @@ class FeedListItemViewController: UIViewController, UITableViewDelegate, UITable
             print(photo)
         }
         
-//        sharedImageCache.retrieveImageForEntity(photo, withFormatName: formatName, completionBlock: {
-//            (photo, _, image) -> Void in
-//            if (photo as! Photo) == cell.photo {
-//                cell.profilePicture.image = image
-//            }
-//        })
-//        
+        sharedImageCache.retrieveImageForEntity(photo, withFormatName: formatName, completionBlock: {
+            (photo, _, image) -> Void in
+            if (photo as! Photo) == cell.photo {
+                cell.profilePicture.sd_setImageWithURL(imageURL)
+                cell.mainImage.sd_setImageWithURL(imageURL)
+            }
+        })
+
 //        cell.mainImage.image = UIImage(named: "Imaeg-2")
-//        cell.profilePicture.image = UIImage(named: "Image-2")
+//        cell.profilePicture.sd_setImageWithURL(photo.sourceImageURL)
+        
         
         return cell
     }
@@ -124,7 +127,7 @@ class FeedListItemViewController: UIViewController, UITableViewDelegate, UITable
                                 
                                 let lastItem = self.photos.count
                                 self.photos.appendContentsOf(photos)
-                                
+                                print("photos : \(self.photos[0].valueForKey("sourceImageURL"))")
                                 let indexPaths = (lastItem..<self.photos.count).map { NSIndexPath(forItem: $0, inSection: 0) }
                                 
                                 dispatch_async(dispatch_get_main_queue()) {
