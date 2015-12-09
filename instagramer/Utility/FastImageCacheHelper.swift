@@ -7,21 +7,19 @@
 //
 
 import Foundation
-
-import Foundation
 import UIKit
 import FastImageCache
 
-let KMPhotoImageFormatFamily = "KMPhotoImageFormatFamily"
-let KMSmallImageFormatName = "KMSmallImageFormatName"
-let KMBigImageFormatName = "KMBigImageFormatName"
+let FSPhotoImageFormatFamily = "FSPhotoImageFormatFamily"
+let FSSmallImageFormatName = "FSSmallImageFormatName"
+let FSBigImageFormatName = "FSBigImageFormatName"
 
-var KMSmallImageSize: CGSize {
+var FSSmallImageSize: CGSize {
     let width = (UIScreen.mainScreen().bounds.size.width - 2) / 3
     return CGSize(width: width, height: width)
 }
 
-var KMBigImageSize: CGSize {
+var FSBigImageSize: CGSize {
     let width = UIScreen.mainScreen().bounds.size.width * 2
     return CGSize(width: width, height: width)
 }
@@ -31,10 +29,10 @@ class FastImageCacheHelper {
     class func setUp(delegate: FICImageCacheDelegate) {
         var imageFormats = [AnyObject]()
         let squareImageFormatMaximumCount = 400;
-        let smallImageFormat = FICImageFormat(name: KMSmallImageFormatName, family: KMPhotoImageFormatFamily, imageSize: KMSmallImageSize, style: .Style32BitBGRA, maximumCount: squareImageFormatMaximumCount, devices: .Phone, protectionMode: .None)
+        let smallImageFormat = FICImageFormat(name: FSSmallImageFormatName, family: FSPhotoImageFormatFamily, imageSize: FSSmallImageSize, style: .Style32BitBGRA, maximumCount: squareImageFormatMaximumCount, devices: .Phone, protectionMode: .None)
         imageFormats.append(smallImageFormat)
         
-        let bigImageFormat = FICImageFormat(name: KMBigImageFormatName, family: KMPhotoImageFormatFamily, imageSize: KMBigImageSize, style: .Style32BitBGRA, maximumCount: squareImageFormatMaximumCount, devices: .Phone, protectionMode: .None)
+        let bigImageFormat = FICImageFormat(name: FSBigImageFormatName, family: FSPhotoImageFormatFamily, imageSize: FSBigImageSize, style: .Style32BitBGRA, maximumCount: squareImageFormatMaximumCount, devices: .Phone, protectionMode: .None)
         imageFormats.append(bigImageFormat)
         
         let sharedImageCache = FICImageCache.sharedImageCache()

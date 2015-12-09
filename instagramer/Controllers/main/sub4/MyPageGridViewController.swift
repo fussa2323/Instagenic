@@ -16,7 +16,7 @@ import FastImageCache
 class MyPageGridViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    let formatName = KMSmallImageFormatName
+    let formatName = FSSmallImageFormatName
     var photos = [Photo]()
     let refreshControl = UIRefreshControl()
     var nextURLRequest = NSURLRequest?()

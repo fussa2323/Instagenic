@@ -27,13 +27,13 @@ class TabBarController: UITabBarController {
         
         currentAccount = CurrentAccount.sharedController.account
         
-//        if currentAccount != nil{
-//            print("Logged in!")
-//            print("Login user : \(currentAccount)")
-//            isLogin = true
-//        } else {
-//            isLogin = false
-//        }
+        if currentAccount != nil{
+            print("Logged in!")
+            print("Login user : \(currentAccount)")
+            isLogin = true
+        } else {
+            isLogin = false
+        }
         
         //logout nortificationの登録
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "logout", name: "logout", object: nil)

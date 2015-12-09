@@ -19,16 +19,16 @@ struct Instagram {
         case PopularPhotos(String, String) //ユーザが公開しているうちもっとも新しいメディアを取得する
         case GetPopularPhoto(String) //ポピュラー写真を取得
         case GetUserInfo(String, String) //Userの基本情報を取得
-        case GetUserFeed(String, String, String, String) //UserのFeedを取得
+        case GetUserFeed(String) //UserのFeedを取得
         case GetUserBySearch(String, String) //ユーザを名前で検索する
         case requestOauthCode
         
         var URLRequest: NSMutableURLRequest {
             let result: (path: String, parameters: [String: AnyObject]?) = {
                 switch self {
-                case .PopularPhotos (let userID, let accessToken):
+                case .PopularPhotos (let instagramId, let accessToken):
                     let params = ["access_token": accessToken]
-                    let pathString = "/v1/users/" + userID + "/media/recent"
+                    let pathString = "/v1/users/" + instagramId + "/media/recent"
                     return (pathString, params)
                     
                 case .GetPopularPhoto(let accessToken):
@@ -36,14 +36,14 @@ struct Instagram {
                     let pathString = "/vi/media/popular/?client_id=" + Router.clientID
                     return (pathString, params)
                 
-                case .GetUserInfo(let userID, let accessToken):
+                case .GetUserInfo(let instagramId, let accessToken):
                     let params = ["access_token": accessToken]
-                    let pathString = "/vi/users/" + userID + "/media/recent"
+                    let pathString = "/vi/users/" + instagramId + "/media/recent?client_id=" + Router.clientID
                     return (pathString, params)
                 
-                case .GetUserFeed(let userID, let accessToken, let maxID, let minID):
-                    let params = ["access_token": accessToken, "max_id": maxID, "min_id": minID]
-                    let pathString = "/vi/users/" + userID + "/feed"
+                case .GetUserFeed(let accessToken):
+                    let params = ["access_token": accessToken]
+                    let pathString = "/vi/users/self/feed"
                     return (pathString, params)
                     
                 case .GetUserBySearch(let q, let accessToken):
